@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authoring-tool" content="Adobe_Animate_CC">
+    <title>MAA | 神兽管理局</title>
+    <script src="js/d3.js"></script>
+    <script src="js/createjs.min.js"></script>
+    <link rel="stylesheet" href="css/currency.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/menupage.css">
+    <link rel="shortcut icon" href="img/MAA-logo.ico" type="image/x-icon">
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--t-purple);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="menupage">
+        <div class="menupage-window">
+            <div class="menupage-window-imgboxs"
+                 onclick="menubar_disapp();menucontrol.jumppage();">
+                <img src="img/menu img1.webp">
+                <img src="img/menu img2.webp">
+                <img src="img/menu img3.webp">
+                <img src="img/menu img4.webp">
+            </div>
+            <img src="svg/window.svg">
+        </div>
+        <div class="menupage-textbox">
+            <div>
+                <p onmouseover="menucontrol.change(0)"
+                   onclick="menucontrol.jumppage(0)">关于<span>. about us</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(1)"
+                   onclick="menucontrol.jumppage(1)">团队<span>. team</span></p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(2)"
+                   onclick="menucontrol.jumppage(2)">图鉴<span>. handbook</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(3)"
+                   onclick="menucontrol.jumppage(3)">征召<span>. join us</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="maalogo">
+        <img src="svg/MAA logo.svg">
+    </div>
+    <div class="mline-icon" onclick="menucontrol.switch()">
+        <div class="mline-icon-text">
+            <p>谱</p>
+            <p>menu</p>
+        </div>
+        <svg x="0" y="0" viewBox="0 0 410 345">
+            <g>
+                <path class="micon-svg-ball"
+                      d="M401,175.5c-0.3,0.8-0.5,1.5-0.8,2.3c-2.3,7-9.2,11.1-16.6,9.8c-6.7-1.2-11.9-7.6-11.8-14.4
+               c0.2-7.3,5.5-13.2,12.7-14.1c7.3-1,14.1,3.7,16,10.8c0.1,0.5,0.3,0.9,0.5,1.4C401,172.8,401,174.1,401,175.5z" />
+                <path class="micon-svg-ringup"
+                      d="M380.8,123.7c3.5,0.3,6.6,3.3,7.2,6.9c0.6,3.6-1.4,7.2-4.7,8.8c-3.1,1.4-6.7,0.8-9.2-1.5
+               c-4.8-4.5-4.9-12.3-0.3-17.1c4.7-4.8,12.7-4.9,17.5-0.1c3.1,3.1,4.5,7,4.5,11.4c0,7.9-6,14.7-13.6,15.7
+               c-8.3,1.1-15.9-3.6-17.8-11.5c-4.6-18.4-11.5-35.7-22-51.5c-26.2-39.5-62.5-64.3-109.1-73C152.1-3.3,72.5,43.7,46.7,121.7
+               c-1.6,4.7-2.8,9.5-4.1,14.2c-1.8,6.5-7.2,11.2-13.6,11.9c-7,0.7-13.3-2.7-16.4-8.7c-3-6-1.9-13.2,2.7-18.2c4.6-5,12.4-5.1,17.4-0.3
+               c4.9,4.7,4.9,12.5,0,17.2c-2.6,2.5-6.5,3.1-9.7,1.3c-3.2-1.7-4.9-5.3-4.1-9c0.7-3.4,3.7-6.1,7.1-6.4" />
+                <path class="micon-svg-ringdown"
+                      d="M380.8,223.1c3.5-0.3,6.6-3.3,7.2-6.9c0.6-3.6-1.4-7.2-4.7-8.8c-3.1-1.4-6.7-0.8-9.2,1.5
+               c-4.8,4.5-4.9,12.3-0.3,17.1c4.7,4.8,12.7,4.9,17.5,0.1c3.1-3.1,4.5-7,4.5-11.4c0-7.9-6-14.7-13.6-15.7
+               c-8.3-1.1-15.9,3.6-17.8,11.5c-4.6,18.4-11.5,35.7-22,51.5c-26.2,39.5-62.5,64.3-109.1,73c-81.1,15.1-160.8-32-186.6-109.9
+               c-1.6-4.7-2.8-9.5-4.1-14.2c-1.8-6.5-7.2-11.2-13.6-11.9c-7-0.7-13.3,2.7-16.4,8.7c-3,6-1.9,13.2,2.7,18.2c4.6,5,12.4,5.1,17.4,0.3
+               c4.9-4.7,4.9-12.5,0-17.2c-2.6-2.5-6.5-3.1-9.7-1.3c-3.2,1.7-4.9,5.3-4.1,9c0.7,3.4,3.7,6.1,7.1,6.4" />
+                <path class="micon-svg-ball" d="M41.5,173.4c0,8-6.4,14.5-14.4,14.6c-8,0.1-14.6-6.4-14.6-14.4c0-8,6.4-14.5,14.4-14.6
+               C34.9,158.9,41.5,165.4,41.5,173.4z" />
+            </g>
+        </svg>
+    </div>
+    <div class="mline-text">
+        <div class="mline-text-tbox" onclick="pageconvert(0)">
+            <p>about us</p>
+            <p>关于</p>
+        </div>
+        <div class="mline-text-tbox" onclick="pageconvert(1)">
+            <p> our team</p>
+            <p>团队</p>
+        </div>
+        <div class="mline-text-tbox" onclick="pageconvert(2)">
+            <p>handbook</p>
+            <p>图鉴</p>
+        </div>
+        <div class="mline-text-tbox" onclick="pageconvert(3)">
+            <p>join us</p>
+            <p>征召</p>
+        </div>
+    </div>
+    <div class="mline-scrollline">
+        <div class="mline-scrollline-text"> scroll </div>
+        <svg class="mline-scrollline-line" viewBox="0 0 6 164">
+            <path d="M3,0V164" />
+        </svg>
+    </div>
+    <div class="mouseicon">
+        <p>click</p>
+        <svg class="click_ring" x="0" y="0" viewBox="0 0 500 500">
+            <g>
+                <path
+                      d="M389.8,61.8c-7.6,10.2-15.2,20.5-22.9,30.7c10.9,8.6,20.7,17.6,30.2,27.8c9.7-8.3,19.3-16.7,29-25
+		c-8.4-9.5-17.5-18.4-27.4-26.4c-6.2,7.5-9.3,11.3-15.5,18.8c7.8,6.4,11.5,9.8,18.4,17" />
+                <path
+                      d="M461.3,148.6c-11.6,5.3-23.2,10.6-34.8,16c-5.7-11.9-12.7-23.2-20.7-33.7c10.2-7.6,20.5-15.3,30.7-22.9
+		c7.5,9.8,14.1,20.2,20,31c-8.7,4.5-13,6.7-21.7,11.2c-4.6-8.5-7.1-12.6-12.7-20.6" />
+                <path
+                      d="M473.6,179.9c-12.2,3.8-24.4,7.6-36.6,11.4c3.8,13.4,6.4,26.4,8.1,40.2c12.7-1.1,25.5-2.1,38.2-3.2
+		c-1.2-12.6-3.4-25.2-6.6-37.5c-9.4,2.4-14.2,3.7-23.6,6.1c2.6,9.8,3.5,14.7,4.9,24.6" />
+                <path
+                      d="M480.5,292.1c-12.5-2.5-25-5-37.6-7.6c2.3-13,3.4-26.2,3-39.4c12.8-0.2,25.5-0.3,38.3-0.5
+		c0.3,12.3-0.4,24.6-2.1,36.8c-9.6-1.5-14.5-2.2-24.1-3.7c1.3-9.5,1.7-14.4,1.8-24.1" />
+                <path
+                      d="M472.1,324.6c-12.1-4.1-24.2-8.2-36.3-12.2c-4.8,13.1-10.3,25.2-17.1,37.3c10.9,6.6,21.9,13.2,32.8,19.8
+		c6.5-10.9,12.1-22.4,16.7-34.2c-9.1-3.6-13.6-5.4-22.7-8.9c-3.7,9.4-5.8,14-10.5,22.8" />
+                <path
+                      d="M411.7,419.5c-8.6-9.4-17.3-18.8-25.9-28.2c9.5-9.1,18.1-19.2,25.6-30.1c10.4,7.4,20.8,14.8,31.3,22.1
+		c-7,10.1-14.8,19.7-23.3,28.6c-6.9-6.9-10.4-10.3-17.3-17.1c6.6-7,9.8-10.7,15.7-18.4" />
+                <path
+                      d="M385.7,440.8c-7.4-10.4-14.8-20.8-22.2-31.2c-11.6,7.7-23.1,14.3-35.7,20.2c5,11.8,9.9,23.5,14.9,35.3
+		c11.7-5,22.9-11,33.6-17.9c-5.2-8.2-7.9-12.3-13.1-20.6c-8.5,5.5-12.9,7.9-21.9,12.2" />
+                <path
+                      d="M281.2,482.1c-1.5-12.7-2.9-25.4-4.4-38.1c13.1-1.8,26-4.9,38.5-9.3c4.1,12.1,8.2,24.2,12.3,36.3
+		c-11.6,4.1-23.6,7.2-35.7,9.4c-1.6-9.6-2.4-14.4-4-24.1c9.5-1.7,14.2-2.9,23.5-5.7" />
+                <path
+                      d="M247.6,484.1c0.1-12.8,0.3-25.5,0.4-38.3c-13.9-0.5-27.1-2-40.8-4.7c-2.9,12.4-5.8,24.9-8.7,37.3
+		c12.4,2.8,25,4.5,37.7,5.3c0.6-9.7,0.9-14.6,1.5-24.3c-10.1-0.6-15.1-1.2-24.9-2.9" />
+                <path
+                      d="M138.7,456c6.3-11.1,12.5-22.3,18.8-33.4c11.6,6.3,23.9,11.3,36.6,15.1c-3.8,12.2-7.6,24.4-11.4,36.6
+		c-11.8-3.5-23.3-8-34.4-13.4c4.4-8.7,6.6-13.1,10.9-21.8c8.7,4.2,13.2,6,22.4,9.2" />
+                <path
+                      d="M110.4,437.9c7.6-10.2,15.2-20.5,22.9-30.7c-10.9-8.6-20.7-17.6-30.2-27.8c-9.7,8.3-19.3,16.7-29,25
+		c8.4,9.5,17.5,18.4,27.4,26.4c6.2-7.5,9.3-11.3,15.5-18.8c-7.8-6.4-11.5-9.8-18.4-17" />
+                <path
+                      d="M38.9,351.2c11.6-5.3,23.2-10.6,34.8-16c5.7,11.9,12.7,23.2,20.7,33.7c-10.2,7.6-20.5,15.3-30.7,22.9
+		c-7.5-9.8-14.1-20.2-20-31c8.7-4.5,13-6.7,21.7-11.2c4.6,8.5,7.1,12.6,12.7,20.6" />
+                <path
+                      d="M26.6,319.9c12.2-3.8,24.4-7.6,36.6-11.4c-3.8-13.4-6.4-26.4-8.1-40.2c-12.7,1.1-25.5,2.1-38.2,3.2
+		c1.2,12.6,3.4,25.2,6.6,37.5c9.4-2.4,14.2-3.7,23.6-6.1c-2.6-9.8-3.5-14.7-4.9-24.6" />
+                <path
+                      d="M19.7,207.7c12.5,2.5,25,5,37.6,7.6c-2.3,13-3.4,26.2-3,39.4c-12.8,0.2-25.5,0.3-38.3,0.5
+		c-0.3-12.3,0.4-24.6,2.1-36.8c9.6,1.5,14.5,2.2,24.1,3.7c-1.3,9.5-1.7,14.4-1.8,24.1" />
+                <path
+                      d="M28.1,175.1c12.1,4.1,24.2,8.2,36.3,12.2c4.8-13.1,10.3-25.2,17.1-37.3c-10.9-6.6-21.9-13.2-32.8-19.8
+		c-6.5,10.9-12.1,22.4-16.7,34.2c9.1,3.6,13.6,5.4,22.7,8.9c3.7-9.4,5.8-14,10.5-22.8" />
+                <path
+                      d="M88.5,80.3c8.6,9.4,17.3,18.8,25.9,28.2c-9.5,9.1-18.1,19.2-25.6,30.1c-10.4-7.4-20.8-14.8-31.3-22.1
+		c7-10.1,14.8-19.7,23.3-28.6c6.9,6.9,10.4,10.3,17.3,17.1c-6.6,7-9.8,10.7-15.7,18.4" />
+                <path
+                      d="M114.4,58.9c7.4,10.4,14.8,20.8,22.2,31.2c11.6-7.7,23.1-14.3,35.7-20.2c-5-11.8-9.9-23.5-14.9-35.3
+		c-11.7,5-22.9,11-33.6,17.9c5.2,8.2,7.9,12.3,13.1,20.6c8.5-5.5,12.9-7.9,21.9-12.2" />
+                <path
+                      d="M219,17.7c1.5,12.7,2.9,25.4,4.4,38.1c-13.1,1.8-26,4.9-38.5,9.3c-4.1-12.1-8.2-24.2-12.3-36.3
+		c11.6-4.1,23.6-7.2,35.7-9.4c1.6,9.6,2.4,14.4,4,24.1c-9.5,1.7-14.2,2.9-23.5,5.7" />
+                <path
+                      d="M252.6,15.7c-0.1,12.8-0.3,25.5-0.4,38.3c13.9,0.5,27.1,2,40.8,4.7c2.9-12.4,5.8-24.9,8.7-37.3
+		c-12.4-2.8-25-4.5-37.7-5.3c-0.6,9.7-0.9,14.6-1.5,24.3c10.1,0.6,15.1,1.2,24.9,2.9" />
+                <path
+                      d="M361.4,43.8c-6.3,11.1-12.5,22.3-18.8,33.4C331,70.9,318.7,65.8,306,62.1c3.8-12.2,7.6-24.4,11.4-36.6
+		c11.8,3.5,23.3,8,34.4,13.4c-4.4,8.7-6.6,13.1-10.9,21.8c-8.7-4.2-13.2-6-22.4-9.2" />
+                <g>
+                    <circle cx="250.1" cy="249.9" r="243" />
+                    <circle cx="250.1" cy="249.9" r="185.2" />
+                    <circle cx="250.1" cy="249.9" r="176" />
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div id="feettext">
+        <div class="ft-tbox0">
+            <p>hi! here is</p>
+            <p>你好，这里是</p>
+        </div>
+        <div class="ft-tbox1">
+            <p>Mythical Animals Authority</p>
+            <p>神兽管理局·中国分局</p>
+        </div>
+        <div class="ft-tbox2">
+            <p>IN CHINA.</p>
+            <p>欢迎你的到来</p>
+        </div>
+    </div>
+    <div id="homepage">
+        <div class="hp-backg">
+            <img src="img/welcome/hp-back.jpg">
+        </div>
+        <div class="hp-cloudline">
+            <svg x="0" y="0" viewBox="0 0 345 135">
+                <g>
+                    <path
+                          d="M337,2.8H28.6c-11.6,0-21,9.4-21,21c0,11.6,9.4,21,21,21h209.2c12.1,0,21.9,9.8,21.9,21.9
+               c0,12.1-9.8,21.9-21.9,21.9h-84.3c-12.1,0-21.9,9.8-21.9,21.9c0,12.1,9.8,21.9,21.9,21.9H337" />
+                    <path
+                          d="M337,2.8H51.6c-11.6,0-21,9.4-21,21c0,11.6,9.4,21,21,21h205c12.1,0,21.9,9.8,21.9,21.9
+               c0,12.1-9.8,21.9-21.9,21.9h-103c-12.1,0-21.9,9.8-21.9,21.9c0,12.1,9.8,21.9,21.9,21.9H337" />
+                </g>
+            </svg>
+            <svg x="0" y="0" viewBox="0 0 290 180">
+                <g>
+                    <path d="M249.1,176.5H31.6c-12.1,0-21.9-9.8-21.9-21.9s9.8-21.9,21.9-21.9h209c12.1,0,21.9-9.8,21.9-21.9
+                    s-9.8-21.9-21.9-21.9H117.4c-11.7,0-21.1-9.4-21.1-21.1s9.4-21.1,21.1-21.1H219c11.9,0,21.6-9.7,21.6-21.6
+                    c0-11.9-9.7-21.6-21.6-21.6h-58.9" />
+                    <path d="M249.1,176.5H53.5c-12.1,0-21.9-9.8-21.9-21.9s9.8-21.9,21.9-21.9h205.8c12.1,0,21.9-9.8,21.9-21.9
+                    s-9.8-21.9-21.9-21.9H138.4c-11.7,0-21.1-9.4-21.1-21.1s9.4-21.1,21.1-21.1H219c11.9,0,21.6-9.7,21.6-21.6
+                    c0-11.9-9.7-21.6-21.6-21.6h-58.9" />
+                </g>
+            </svg>
+            <svg x="0" y="0" viewBox="0 0 280 190">
+                <g>
+                    <path d="M37.4,4.8h118.7c12.4,0,22.5,10.1,22.5,22.5s-10.1,22.5-22.5,22.5H29.7c-12.4,0-22.5,10.1-22.5,22.5
+                        s10.1,22.5,22.5,22.5h219.8c12.4,0,22.5,10.1,22.5,22.5s-10.1,22.5-22.5,22.5h-93.3c-12.4,0-22.5,10.1-22.5,22.5
+                        c0,12.4,10.1,22.5,22.5,22.5h56.8" />
+                    <path d="M37.4,4.8h118.7c12.4,0,22.5,10.1,22.5,22.5s-10.1,22.5-22.5,22.5H50.6c-12.4,0-22.5,10.1-22.5,22.5
+                        s10.1,22.5,22.5,22.5h178.7c12.4,0,22.5,10.1,22.5,22.5s-10.1,22.5-22.5,22.5h-97.2c-12.4,0-22.5,10.1-22.5,22.5
+                        c0,12.4,10.1,22.5,22.5,22.5h80.8" />
+                </g>
+            </svg>
+        </div>
+        <div class="hp-sun">
+            <svg x="0" y="0" viewBox="0 0 500 500">
+                <filter id="hp-sun-blur1">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="15">
+                    </feGaussianBlur>
+                </filter>
+                <filter id="hp-sun-blur2">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="20">
+                    </feGaussianBlur>
+                </filter>
+                <circle class="hp-sun-in" cx="250" cy="250" r="200"></circle>
+                <circle class="hp-sun-middle" cx="250" cy="250" r="190"
+                        filter="url(#hp-sun-blur1)"></circle>
+                <circle class="hp-sun-out" cx="250" cy="240" r="220"
+                        filter="url(#hp-sun-blur2)"></circle>
+                <circle class="hp-sun-edge" cx="250" cy="260" r="250"
+                        filter="url(#hp-sun-blur2)"></circle> -->
+            </svg>
+        </div>
+        <div class="hp-cloud">
+            <svg x="0px" y="0px" viewBox="0 0 660 350">
+                <path
+                      d="M518.1,80.5c-33-21.2-49.6,0.3-60.3-5.1C447.1,70,442.2,5.1,356.6,23.2c-33.7,8.8-43.5,58.6-40.8,73.2
+                s-3.9,23.4-22.4,15.1s-35.1,11.6-35.1,11.6s18.8,7.9,25.1,22.8c16.3,37.4-19.6,61.2-40.4,61c-4.7,0.3-11.6-3.1-11.6-3.1
+                s26.2,3.9,36.8-24.2c10.2-35.8-17.3-46-42.5-44.9c-32.8-0.3-84.6,40.8-106.5,54.7C82.8,213,38.6,206,38.6,206s1,6.9,29.8,11
+                c28.8,4.1,83-4.8,83-4.8c42.6-4,55.8,3.1,74.1,22s70.7,62.6,111.3,54.3c99.6-22.4,85.1-92.1,64.2-107.1c-11.9-7.8-48.1-12.7-48.3,19
+                c-0.5,18.8,32,13.4,32,13.4s-40.2,11.7-42.2-17.3c-2.5-38.2,93.7-71.2,91.4,19.8c-1.5,49.4-43.6,74.4-43.6,74.4s1.6,15.3,18.3,27.1
+                c54.2,41.5,92.5-35.9,107.9-27.6c35.6,12.7,41.5-9.2,39.1-13.8c-2.4-4.7-7.6-6.1-10.6-8.2c-28.8-19.4-28-34.8-24-51.6
+                c6.2-23.2,30-16.6,39.7-7.6c6.8,6.7,8.8,14.6,8.8,14.6s-19.5-21-28.3-9.1c-31.6,49.3,85.7,70.2,80.2-28.7
+                c-3.3-76.9-92.1-56.9-94.8-59.9C523.9,122.9,534.4,92,518.1,80.5z" />
+            </svg>
+            <svg x="0" y="0" viewBox="0 0 660 365">
+                <path d="M74.2,222c0,0,19.3-38.3,38.3-12.6c25,33.2-22.2,73.4-69.5,48.4c-47.3-25-18.6-71.4-18.6-71.4s-23.5-21.6-12.7-55s32.8-24.2,
+                38.7-30.4s29.2-51.6,62.3-25.3c9.4,9.7,0.5,28.7,14.6,46.9c11.7,15.7,43.8,23,61,2.9c19.5-25.8,1.5-45.3-8.3-50.1c-10.7-4.3-20.1,
+                3.6-20.1,3.6s14.4-7,23.3,8.6c21.6,35.7-48.5,61.9-49.1,9.4c0-31.9,9.2-62.7,41.3-69.2s49.3,7.3,49.3,7.3S246,7,278.8,5.1s51.9,
+                28.2,51.9,28.2s42.3-29.7,62.4-2.2c43.8,59.1-48.8,91.7-51.1,60.3c-1.3-21,15.6-15.6,15.6-15.6s-5-9-14.9-2.3c-7.8,5.2-11.1,29.3-2.1,
+                36.6c51.3,42.6,61.4-82.4,158.4-10.7c57.7,44.1,13,122.6-1.3,136.5c-52.2,45.1-112.1,4.7-95.6-37c0,0,5.3-11,14.7-7.9s12.4,12.1,
+                12.4,12.1s10.9-18.8-9.1-25.5c-19.9-6.6-28.7,21.2-30,28.4c-1.3,7.1-1.3,50.3,65.5,57.1c56.1,2.9,78.8-34.7,122.6-37.6c43.8-2.9,
+                73.3,1,73.3,1s-61.5,0.1-117,31.1c-21,11.5-77,39.5-122.2,39.9c-39.1,0.3-72.7-27.2-73.3-27.2c-1.3,0,34.4-7.1,
+                40.5-50.6c5.5-35.3-17.8-54.3-28.5-56.6c-10.8-2.3-16.3-0.9-36.5-4.6c-16.2-3-26.7-16-52.4-12.7c-23.2,3.7-24.7,12.2-35.7,
+                14.7s-53.2-2-66.1,46s15.6,65.2,31.1,66.8c24.6,2.9,40.9-34.7,40.9-34.7s43.4,114.8,173.1,95c49.3-8.1,58.4-14.6,58.4-14.6s-118.3,
+                33.7-176.1-21.1c-39.2-42.5-33.8-56.2-48.4-68.6c-14.5-9.7-33.4-6.7-33.4-6.7s14.1,5.3,13.8,16c-0.1,9.5-6.2,23.3-24.3,23.8c-13.1,
+                1.2-35.9-27.7-20.8-58.6c17.8-37.9,42.3-26.5,59.6-33.3c17.3-6.8,15.2-12,37-13.6c20.8-1,22.4,6.8,41.1,9.4c15.7,1.8,42.9,1.8,
+                53.9,26.6c11.7,27.2-4.3,68.9-28.4,61.5c-27.7-8.5-7.9-35.5-7.9-35.5s-22.2-1-22.9,21.6c-0.7,22.6,41.5,61.6,89.9,67.4c48.4,5.8,
+                85.4-7.1,144.7-33.3c59.3-26.3,86.6-20.9,86.6-20.9s-62.6,22.9-112.2,60.1c-33.1,24.3-121.7,64.8-235.6,36.6C82,290.1,154.4,
+                192,98.5,190.2C72.9,192.2,74.2,222,74.2,222z" />
+            </svg>
+        </div>
+        <div class="hp-text">
+            <div class="hp-text-up">
+                <p>wellcome to</p>
+                <div> M<div>ythical</div> A<div>nimals</div> A<div>uthority
+                    </div>
+                </div>
+                <p>神兽</p>
+            </div>
+            <div class="hp-text-down">
+                <p>in china</p>
+                <p>管理局</p>
+            </div>
+        </div>
+        <a onclick="jumppage_main()" class="hp-m-judge"
+           onmouseover="click_show(event)" onmouseout="click_disapp(event)"></a>
+    </div>
+    <div id="teampage">
+        <div class="tp-back">
+            <img src="img/welcome/tp-back.jpg">
+        </div>
+        <div class="tp-text">
+            <div class="tp-text-up">
+                <p>our best</p>
+                <p>神兽猎捕</p>
+            </div>
+            <div class="tp-text-down">
+                <p>team</p>
+                <p>团队</p>
+            </div>
+        </div>
+        <div class="tp-card-box">
+            <img src="img/welcome/cards box.png">
+        </div>
+        <a class="tp-cardall" onclick="jumppage_main()">
+            <div class="membercard" id="m-card">
+                <div class="membercard-img">
+                    <div class="membercard-img-show" style="background: url('img/welcome/TM_0213.webp') no-repeat;
+                          background-position: center;
+                          background-size: cover;">
+                    </div>
+                    <div class="membercard-img-Mask" style="background: url('img/welcome/TM_0213 mask.webp') no-repeat;
+                         background-position: center;
+                         background-size: cover;"> ?</div>
+                </div>
+                <div class="membercard-text">
+                    <div class="membercard-text-bottom">
+                        <img src="svg/welcome/team card bottom.svg">
+                    </div>
+                    <div class="membercard-text-name">
+                        <p>后羿</p>
+                        <p>no.0213</p>
+                    </div>
+                </div>
+            </div>
+            <div class="membercard" id="m-card">
+                <div class="membercard-img">
+                    <div class="membercard-img-show" style="background: url('img/welcome/TM_0216.webp') no-repeat;
+                          background-position: center;
+                          background-size: cover;">
+                    </div>
+                    <div class="membercard-img-Mask" style="background: url('img/welcome/TM_0216 mask.webp') no-repeat;
+                         background-position: center;
+                         background-size: cover;"> ?</div>
+                </div>
+                <div class="membercard-text">
+                    <div class="membercard-text-bottom">
+                        <img src="svg/welcome/team card bottom.svg">
+                    </div>
+                    <div class="membercard-text-name">
+                        <p>神农</p>
+                        <p>no.0216</p>
+                    </div>
+                </div>
+            </div>
+            <div class="membercard" id="m-card">
+                <div class="membercard-img">
+                    <div class="membercard-img-show" style="background: url('img/welcome/TM_0217.webp') no-repeat;
+                          background-position: center;
+                          background-size: cover;">
+                    </div>
+                    <div class="membercard-img-Mask" style="background: url('img/welcome/TM_0217 mask.webp') no-repeat;
+                         background-position: center;
+                         background-size: cover;"> ?</div>
+                </div>
+                <div class="membercard-text">
+                    <div class="membercard-text-bottom">
+                        <img src="svg/welcome/team card bottom.svg">
+                    </div>
+                    <div class="membercard-text-name">
+                        <p>庄周</p>
+                        <p>no.0217</p>
+                    </div>
+                </div>
+            </div>
+            <div class="membercard" id="m-card">
+                <div class="membercard-img">
+                    <div class="membercard-img-show" style="background: url('img/welcome/TM_0218.webp') no-repeat;
+                          background-position: center;
+                          background-size: cover;">
+                    </div>
+                    <div class="membercard-img-Mask" style="background: url('img/welcome/TM_0218 mask.webp') no-repeat;
+                         background-position: center;
+                         background-size: cover;"> ?</div>
+                </div>
+                <div class="membercard-text">
+                    <div class="membercard-text-bottom">
+                        <img src="svg/welcome/team card bottom.svg">
+                    </div>
+                    <div class="membercard-text-name">
+                        <p>精卫</p>
+                        <p>no.0218</p>
+                    </div>
+                </div>
+            </div>
+            <div class="membercard" id="m-card">
+                <div class="membercard-img">
+                    <div class="membercard-img-show" style="background: url('img/welcome/TM_0219.webp') no-repeat;
+                          background-position: center;
+                          background-size: cover;">
+                    </div>
+                    <div class="membercard-img-Mask" style="background: url('img/welcome/TM_0219 mask.webp') no-repeat;
+                         background-position: center;
+                         background-size: cover;"> ?</div>
+                </div>
+                <div class="membercard-text">
+                    <div class="membercard-text-bottom">
+                        <img src="svg/welcome/team card bottom.svg">
+                    </div>
+                    <div class="membercard-text-name">
+                        <p>哪吒</p>
+                        <p>no.0219</p>
+                    </div>
+                </div>
+            </div>
+            <div class="membercard" id="m-card">
+                <div class="membercard-img">
+                    <div class="membercard-img-show" style="background: url('img/welcome/TM_0222.webp') no-repeat;
+                          background-position: center;
+                          background-size: cover;">
+                    </div>
+                    <div class="membercard-img-Mask" style="background: url('img/welcome/TM_0222 mask.webp') no-repeat;
+                         background-position: center;
+                         background-size: cover;"> ?</div>
+                </div>
+                <div class="membercard-text">
+                    <div class="membercard-text-bottom">
+                        <img src="svg/welcome/team card bottom.svg">
+                    </div>
+                    <div class="membercard-text-name">
+                        <p>共工</p>
+                        <p>no.0222</p>
+                    </div>
+                </div>
+            </div>
+            <div class="membercard" id="m-card">
+                <div class="membercard-img">
+                    <div class="membercard-img-show" style="background: url('img/welcome/TM_0223.webp') no-repeat;
+                          background-position: center;
+                          background-size: cover;">
+                    </div>
+                    <div class="membercard-img-Mask" style="background: url('img/welcome/TM_0223 mask.webp') no-repeat;
+                         background-position: center;
+                         background-size: cover;"> ?</div>
+                </div>
+                <div class="membercard-text">
+                    <div class="membercard-text-bottom">
+                        <img src="svg/welcome/team card bottom.svg">
+                    </div>
+                    <div class="membercard-text-name">
+                        <p>炎帝</p>
+                        <p>no.0223</p>
+                    </div>
+                </div>
+            </div>
+            <div class="membercard" id="m-card">
+                <div class="membercard-img">
+                    <div class="membercard-img-show" style="background: url('img/welcome/TM_0224.webp') no-repeat;
+                          background-position: center;
+                          background-size: cover;">
+                    </div>
+                    <div class="membercard-img-Mask" style="background: url('img/welcome/TM_0224 mask.webp') no-repeat;
+                         background-position: center;
+                         background-size: cover;"> ?</div>
+                </div>
+                <div class="membercard-text">
+                    <div class="membercard-text-bottom">
+                        <img src="svg/welcome/team card bottom.svg">
+                    </div>
+                    <div class="membercard-text-name">
+                        <p>风伯</p>
+                        <p>no.0224</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div id="handbookpage">
+        <div class="hbp-background">
+            <div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+            </div>
+            <div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_1.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_2.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_3.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_4.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+            </div>
+            <div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_5.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_6.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_7.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_8.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+            </div>
+            <div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_9.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_10.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_11.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_12.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+            </div>
+            <div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_13.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_14.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_15.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_16.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+            </div>
+            <div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+                <div class="hbp-background-imgbox">
+                    <img src="img/welcome/MA_0.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="hbp-text">
+            <div class="hbp-text-up">
+                <p>the mythical animals</p>
+                <p>华夏古兽志异录</p>
+            </div>
+            <div class="hbp-text-down">
+                <p>handbook</p>
+                <p>神兽图鉴</p>
+            </div>
+        </div>
+        <div id="hbp-animatebox">
+            <canvas id="hbp-animatebox-canvas" width="1024"
+                    height="768"></canvas>
+            <div id="hbp-animatebox_container"></div>
+        </div>
+        <a onclick="jumppage_main()" class="hbp-m-judge"
+           onmouseover="click_show(event)" onmouseout="click_disapp(event)"></a>
+    </div>
+    <div id="joinpage">
+        <div class="jp-back">
+            <img src="img/welcome/jp-back.jpg">
+        </div>
+        <div id="jp-animatebox">
+            <canvas id="jp-animatebox-canvas" width="1920"
+                    height="1200"></canvas>
+            <div id="jp-animatebox_container"></div>
+        </div>
+        <a onclick="jumppage_main()" class="jp-text"
+           onmouseover="click_show(event)" onmouseout="click_disapp(event)">
+            <div class="jp-text-up">
+                <p>came to</p>
+                <p>团队成员</p>
+            </div>
+            <div class="jp-text-down">
+                <p>join us</p>
+                <p>正在招募</p>
+            </div>
+        </a>
+    </div>
+    <script src="js/handbook animate.js"></script>
+    <script src="js/Temple door.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
