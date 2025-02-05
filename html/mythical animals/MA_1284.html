@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="authoring-tool" content="Adobe_Animate_CC" />
+    <title>MAA | 神兽图鉴 NO.1284 凤凰</title>
+    <link rel="stylesheet" href="../../css/currency.css">
+    <link rel="stylesheet" href="../../css/menupage.css">
+    <link rel="stylesheet" href="../../css/mythical_animals.css">
+    <link rel="shortcut icon" href="../../img/MAA-logo.ico" type="image/x-icon">
+    <script src="../../js/d3.js"></script>
+</head>
+<style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--t-purple);
+    }
+
+</style>
+
+<body>
+    <div id="menupage">
+        <div class="menupage-window">
+            <div class="menupage-window-imgboxs"
+                 onclick="menucontrol.jumppage()">
+                <img src="../../img/menu img1.webp">
+                <img src="../../img/menu img2.webp">
+                <img src="../../img/menu img3.webp">
+                <img src="../../img/menu img4.webp">
+            </div>
+            <img src="../../svg/window.svg">
+        </div>
+        <div class="menupage-textbox">
+            <div>
+                <p onmouseover="menucontrol.change(0)"
+                   onclick="menucontrol.jumppage(0)">关于<span>. about us</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(1)"
+                   onclick="menucontrol.jumppage(1)">团队<span>. team</span></p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(2)"
+                   onclick="menucontrol.jumppage(2)">图鉴<span>. handbook</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(3)"
+                   onclick="menucontrol.jumppage(3)">征召<span>. join us</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="menucolmun" id="menucolmun">
+        <div class="menucolmun-logo" onclick=" if (menucontrol.if_pageshow) {menucontrol.jumppage(4);}
+              else {jumppage('../../MAA_home.html')}">
+            <img src="../../svg/MAA logo.svg">
+        </div>
+        <div class="menucolmun-button" onclick="menucontrol.switch()">
+            <svg class="menucolmun-button-linebox menucolmun-button-linebox-off"
+                 viewBox="0 0 600 600">
+                <circle cx="300" cy="300" r="300" />
+                <rect width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="483.125" width="600" height="116.875" />
+            </svg>
+            <div class="menucolmun-button-text">MENU</div>
+        </div>
+    </div>
+    <div class="background">
+        <img class="background-img" src="../../img/mythical animals/1284.webp">
+    </div>
+    <div class="textbackg"></div>
+    <div class="maintext">
+        <div class="maintext-box">
+            <div class="texttitle">凤凰</div>
+            <p class="textblock" value="0">
+                代号1284，凤凰是一对鸟类神兽,雌为“凤”，雄为“凰”，合称为凤凰,是神兽图鉴中最早有记录且与最早与MMA合作的神兽之一。身体形态与普通的鸡一致,全身上下被五彩斑斓的羽毛所覆盖,身上各部分呈现不同的花纹形状。</p>
+            <p class="textblock" value="1">
+                凤凰只有”凤”与”凰”同时存在并且携手同行才能成为凤凰。凤凰是鸟类始祖,能在一定程度上驾驭其他鸟类。凤凰寿命极长,在人类始祖刚出世时,凤凰便已经在人世间了。凤凰每次在有鸟类神兽对人类大肆杀戮,人类又没办法解决时,便会出现来帮助人类。 </p>
+            <p class="textblock" value="2">
+                MMA成员在完成的三足乌的捕获进行最后收尾工作时发现，周边有几根罕见的五彩羽毛，看上去并不是人为的涂抹上的彩色而是自然生长的。这五彩羽毛迅速引起了MMA成员的注意，一边将羽毛回传到基地进行取样化验，一边在周边搜寻五彩身影。最后在经历了一周时间的仔细搜寻后，凤凰终于出现在了MMA成员面前。它们就像专门等MMA成员找到它们一样停留在了宽阔方便谈话的地方。MMA将自己寻找凤凰的原因，以及组织的宗旨目的与关于鸟类神兽的捕获案例等都清晰明了的告诉了凤凰，凤凰在具体了解后表示知道了，但还是需要时间来考虑与观察MMA的情况。</p>
+            <p>经过半年时间，MMA基地终于迎来了凤凰，凤凰选择与MMA合作，在捕获鸟类神兽时会给MMA提供所需要的支持。
+            </p>
+        </div>
+    </div>
+    <div class="mouse_judgebox" onmouseover="mouseicon_show()"
+         onmouseleave="mouseicon_disapper()" onclick="jumppage()">
+        <div class="mouseicon"> BACK </div>
+    </div>
+</body>
+<script src="../../js/menupage.js"></script>
+<script src="../../js/mythical_animals.js"></script>
+<script>
+    backg_imgs = [
+        "../../img/mythical animals/1284.webp",
+        "../../img/mythical animals/1284_2.webp",
+        "../../img/mythical animals/1284_3.webp"
+    ];
+</script>
+
+</html>

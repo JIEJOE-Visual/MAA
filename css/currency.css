@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 2vmin;
+    --t-red: #cf3004;
+    --t-yellow: #f4e10d;
+    --t-purple: #2d0245;
+}
+
+p {
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+@font-face {
+    font-family: eng;
+    src: url(../fonts/AQUARIUM-2.otf);
+}
+
+@font-face {
+    font-family: ch;
+    src: url(../fonts/FZZJ-LongYTJW.ttf);
+}

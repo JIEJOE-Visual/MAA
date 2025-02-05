@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="authoring-tool" content="Adobe_Animate_CC" />
+    <title>MAA | 神兽管理局招募</title>
+    <link rel="stylesheet" href="../css/currency.css">
+    <link rel="stylesheet" href="../css/menupage.css">
+    <link rel="stylesheet" href="../css/joinus.css">
+    <link rel="shortcut icon" href="../img/MAA-logo.ico" type="image/x-icon">
+    <script src="../js/d3.js"></script>
+    <script src="../js/createjs.min.js"></script>
+</head>
+<style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .viewbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .pageall {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+</style>
+
+<body>
+    <div id="menupage">
+        <div class="menupage-window">
+            <div class="menupage-window-imgboxs"
+                 onclick="menucontrol.jumppage()">
+                <img src="../img/menu img1.webp">
+                <img src="../img/menu img2.webp">
+                <img src="../img/menu img3.webp">
+                <img src="../img/menu img4.webp">
+            </div>
+            <img src="../svg/window.svg">
+        </div>
+        <div class="menupage-textbox">
+            <div>
+                <p onmouseover="menucontrol.change(0)"
+                   onclick="menucontrol.jumppage(0)">关于<span>. about us</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(1)"
+                   onclick="menucontrol.jumppage(1)">团队<span>. team</span></p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(2)"
+                   onclick="menucontrol.jumppage(2)">图鉴<span>. handbook</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(3)"
+                   onclick="menucontrol.jumppage(3)">征召<span>. join us</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="menucolmun">
+        <div class="menucolmun-logo" onclick=" if (menucontrol.if_pageshow) {menucontrol.jumppage(4);}
+        else {menucontrol.jumppage(4);disapp();}">
+            <img src="../svg/MAA logo.svg">
+        </div>
+        <div class="menucolmun-button" onclick="menucontrol.switch()">
+            <svg class="menucolmun-button-linebox menucolmun-button-linebox-off"
+                 viewBox="0 0 600 600">
+                <circle cx="300" cy="300" r="300" />
+                <rect width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="483.125" width="600" height="116.875" />
+            </svg>
+            <div class="menucolmun-button-text">MENU</div>
+        </div>
+    </div>
+    <div class="viewbox">
+        <div class="pageall">
+            <div id="welcomepage">
+                <div class="welcomepage-main">
+                    <div class="welcomepage-main-img">
+                        <img src="../svg/MAA logo.svg">
+                    </div>
+                    <div class="welcomepage-main-text">
+                        <div>
+                            <p>加</p>
+                            <p>入</p>
+                            <p>M</p>
+                            <p>A</p>
+                            <p>A</p>
+                        </div>
+                        <div>
+                            <p>came to join us <span>...</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="welcomepage-scrolltip">
+                    <p>向下滑动了解MAA的相关招募章程</p>
+                    <svg viewbox='0 0 20 20'>
+                        <polyline points="2,4.4 10,10.6 18,4.4" />
+                        <polyline points="2,9.4 10,15.6 18,9.4" />
+                    </svg>
+                </div>
+            </div>
+            <div class="introduce1 introduce">
+                <div class="introduce1-textlinesbox">
+                    <div class="introduce1-textline">
+                        <p>MMA能够在几千年里出色的完成</p>
+                    </div>
+                    <div class="introduce1-textline">
+                        <p>每一次行动，并隐觅自己的足迹</p>
+                    </div>
+                    <div class="introduce1-textline">
+                        <p>这一切都归根于我们拥有一批</p>
+                    </div>
+                    <div class="introduce1-textline">
+                        <p>出色的队员，在此之前已经有</p>
+                    </div>
+                    <div class="introduce1-textline">
+                        <p>无数的前辈为我们提供了证明，</p>
+                    </div>
+                    <div class="introduce1-textline">
+                        <p>你所能知道的每一段家喻户晓</p>
+                    </div>
+                    <div class="introduce1-textline">
+                        <p>的神话故事里面大放光彩</p>
+                    </div>
+                    <div class="introduce1-textline">
+                        <p>的主角实际就是我们的优秀队员</p>
+                    </div>
+                </div>
+                <div class="introduce1-img">
+                    <img src="../img/joinus/introduce shadow.png" />
+                </div>
+            </div>
+            <div class="introduce2 introduce">
+                <div class="introduce2-textlinesbox">
+                    <div class="introduce2-textline">
+                        <p>如果你也希望能够成为像他们一样的传奇英雄的话</p>
+                    </div>
+                    <div class="introduce2-textline">
+                        <p>那么很明显，当下最好的选择就是加入MAA</p>
+                    </div>
+                </div>
+                <div class="introduce2-img">
+                    <img src="../img/joinus/introduce door.png" />
+                </div>
+            </div>
+            <div class="introduce3 introduce">
+                <div class="introduce3-img">
+                    <img src="../img/joinus/introduce computer.png" />
+                    <img src="../img/joinus/introduce floatman.png" />
+                </div>
+                <div class="introduce3-textlinebox">
+                    <div class="introduce3-textline">
+                        <p>MMA在转化为地下联盟后</p>
+                    </div>
+                    <div class="introduce3-textline">
+                        <p>依然会间断的对外招募进行</p>
+                    </div>
+                    <div class="introduce3-textline">
+                        <p>队员扩充，我们会选择性的</p>
+                    </div>
+                    <div class="introduce3-textline">
+                        <p>对那些具有潜在特质的人</p>
+                    </div>
+                    <div class="introduce3-textline">
+                        <p>提供开放接口，而这也是你</p>
+                    </div>
+                    <div class="introduce3-textline">
+                        <p>能访问到这里的主要原因</p>
+                    </div>
+                </div>
+            </div>
+            <div class="introduce4 introduce">
+                <div class="introduce4-img">
+                    <img src="../img/joinus/introduce 0545.png" />
+                    <div class="introduce4-img-text">
+                        <p>NO.0545 </p>
+                        <p> 梦蝶</p>
+                    </div>
+                </div>
+                <div class="introduce4-textlinebox">
+                    <div class="introduce4-textline">
+                        <p>如果你认为现在还没有准备好做出这个</p>
+                    </div>
+                    <div class="introduce4-textline">
+                        <p>需要极大勇气的选择的话，倘若你想要离开</p>
+                    </div>
+                    <div class="introduce4-textline">
+                        <p>那么你大可直接关闭这个网页</p>
+                    </div>
+                    <div class="introduce4-textline">
+                        <p>我们会为你提供7天的时间进行考虑，</p>
+                    </div>
+                    <div class="introduce4-textline">
+                        <p>7天之后，如果你依然无法下定决心</p>
+                    </div>
+                    <div class="introduce4-textline">
+                        <p>那么我们就会使用0545号神兽消除</p>
+                    </div>
+                    <div class="introduce4-textline">
+                        <p>你对于MMA的有关记忆</p>
+                    </div>
+                    <div class="introduce4-textline">
+                        <p>并遗憾的表示你的错过</p>
+                    </div>
+                </div>
+            </div>
+            <div class="introduce5 introduce">
+                <div class="introduce5-img">
+                    <img src="../img/joinus/introduce criterion.png">
+                </div>
+                <div class="introduce5-textlinebox">
+                    <div class="introduce5-textline">
+                        <p>反之，如果你觉得你已经具有充足的准备与勇气，</p>
+                    </div>
+                    <div class="introduce5-textline">
+                        <p>那么接下来，我们会很乐意为你讲述我们招募的</p>
+                    </div>
+                    <div class="introduce5-textline">
+                        <p>必要准则，这将会是你加入MMA之前的第一步</p>
+                    </div>
+                </div>
+            </div>
+            <div class="criterion-leadpage">
+                <div class="criterion-leadpage-textlinebox">
+                    <div class="criterion-leadpage-textline">
+                        <p>在加入MMA之前，我们会为你提供一些基本的招募准制</p>
+                    </div>
+                    <div class="criterion-leadpage-textline">
+                        <p>来供参考，你可以比对相关的条件来检视自己是否</p>
+                    </div>
+                    <div class="criterion-leadpage-textline">
+                        <p>符合MMA招募的初步标准；以下只是必要的基本准则</p>
+                    </div>
+                    <div class="criterion-leadpage-textline">
+                        <p>在后续选择职位的时候，我们会再次为你提供</p>
+                    </div>
+                    <div class="criterion-leadpage-textline">
+                        <p>更加全面的职位要求</p>
+                    </div>
+                </div>
+            </div>
+            <div class="criterion-page">
+                <div class="criterion-cardbox">
+                    <div class="criterion-card">
+                        <div class="criterion-card-back"></div>
+                        <div class="criterion-card-text">
+                            <div class="criterion-card-text-head">
+                                <p>1.</p>
+                                <div>
+                                    <p>THE FIRST</p>
+                                    <p>CRITERION</p>
+                                </div>
+                            </div>
+                            <div class="criterion-card-text-line">
+                                <div></div>
+                                <p>壹</p>
+                                <div></div>
+                            </div>
+                            <div class="criterion-card-text-main">
+                                <p>被征召者身上不能有十公分以上的</p>
+                                <p>明显伤口，内脏器官无任何抗压问题</p>
+                                <p>且未做过大型手术，因为在之后</p>
+                                <p>MMA的履职期间，我们会频繁的使用</p>
+                                <p>u型传送通道以快速集结各地MMA队员</p>
+                                <p>来处理不可预测的事件</p>
+                                <p>被征召人的身体条件必须能抵抗传送时</p>
+                                <p>通道所产生的巨大压力</p>
+                            </div>
+                        </div>
+                        <div class="criterion-card-img">
+                            <img src="../img/joinus/criterion 1.webp">
+                        </div>
+                    </div>
+                    <div class="criterion-card criterion-card-move1">
+                        <div class="criterion-card-back"></div>
+                        <div class="criterion-card-text">
+                            <div class="criterion-card-text-head">
+                                <p>2.</p>
+                                <div>
+                                    <p>THE SECOND</p>
+                                    <p>CRITERION</p>
+                                </div>
+                            </div>
+                            <div class="criterion-card-text-line">
+                                <div></div>
+                                <p>贰</p>
+                                <div></div>
+                            </div>
+                            <div class="criterion-card-text-main">
+                                <p>被征召者未患有任何相关的禽类过敏症</p>
+                                <p>比如皮毛过敏，唾液过敏，鳞片过敏等</p>
+                                <p>极易导致无法与神兽接触的相关疾病</p>
+                            </div>
+                        </div>
+                        <div class="criterion-card-img">
+                            <img src="../img/joinus/criterion 2.webp">
+                        </div>
+                    </div>
+                    <div class="criterion-card criterion-card-move2">
+                        <div class="criterion-card-back"></div>
+                        <div class="criterion-card-text">
+                            <div class="criterion-card-text-head">
+                                <p>3.</p>
+                                <div>
+                                    <p>THE THIRTH</p>
+                                    <p>CRITERION</p>
+                                </div>
+                            </div>
+                            <div class="criterion-card-text-line">
+                                <div></div>
+                                <p>叁</p>
+                                <div></div>
+                            </div>
+                            <div class="criterion-card-text-main">
+                                <p>被征召者必须有，且只能有一门</p>
+                                <p>宗教信仰,比如，佛教，道教，基督教</p>
+                                <p>等被世人普遍认同的宗教组织</p>
+                                <p>被征召者未参与任何产生</p>
+                                <p>不良影响的宗教狂热活动</p>
+                                <p>更不能是邪教组织人员</p>
+                            </div>
+                        </div>
+                        <div class="criterion-card-img">
+                            <img src="../img/joinus/criterion 3.webp">
+                        </div>
+                    </div>
+                    <div class="criterion-card criterion-card-move3">
+                        <div class="criterion-card-back"></div>
+                        <div class="criterion-card-text">
+                            <div class="criterion-card-text-head">
+                                <p>4.</p>
+                                <div>
+                                    <p>THE FORTY</p>
+                                    <p>CRITERION</p>
+                                </div>
+                            </div>
+                            <div class="criterion-card-text-line">
+                                <div></div>
+                                <p>肆</p>
+                                <div></div>
+                            </div>
+                            <div class="criterion-card-text-main">
+                                <p>被征召者必须具有健康的心理状态</p>
+                                <p>未患有任何严重的心理疾病</p>
+                                <p>包括巨物恐惧症，反社会人格</p>
+                                <p>虐待性人格等极大可能会</p>
+                                <p>对组织工作产生影响的疾病</p>
+                            </div>
+                        </div>
+                        <div class="criterion-card-img">
+                            <img src="../img/joinus/criterion 4.webp">
+                        </div>
+                    </div>
+                    <div class="criterion-card criterion-card-move4">
+                        <div class="criterion-card-back"></div>
+                        <div class="criterion-card-text">
+                            <div class="criterion-card-text-head">
+                                <p>5.</p>
+                                <div>
+                                    <p>THE FIFTH</p>
+                                    <p>CRITERION</p>
+                                </div>
+                            </div>
+                            <div class="criterion-card-text-line">
+                                <div></div>
+                                <p>伍</p>
+                                <div></div>
+                            </div>
+                            <div class="criterion-card-text-main">
+                                <p>最重要的一点：</p>
+                                <p>被征召者必须有极高的思想觉悟</p>
+                                <p>来认清自己所供职的组织性质</p>
+                                <p>不可对任何人，甚至是自己最亲密的人</p>
+                                <p>泄露任何与MAA相关的情报机密</p>
+                            </div>
+                        </div>
+                        <div class="criterion-card-img">
+                            <img src="../img/joinus/criterion 5.webp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profpage-leadtext">
+                <p>在满足以上五点基本要求后，接下来你就可以根据情况</p>
+                <p>来选择自己想要的职位。在最开始，我们只会为你提供</p>
+                <p>4个基本职位，在完成征召情愿，并通过MMA上级的审核后，</p>
+                <p>你便可以进入MMA参与神兽相关的管理工作，</p>
+                <p>在一段时间的经验积累后，我们会在后续再次为你</p>
+                <p>提供更高阶的职位升级</p>
+            </div>
+            <div class="profpage">
+                <div class="profpage-left">
+                    <div class="profpage-left-messagebox">
+                        <div class="profname">
+                            <p>鸢</p>
+                            <div class="profname-eng">
+                                <img src="../img/joinus/profession line.png">
+                                <p>THE WHATGHER</p>
+                                <img src="../img/joinus/profession line.png">
+                            </div>
+                            <p>目</p>
+                        </div>
+                        <div class="profintroduce">
+                            <div class="profintroduce-text">
+                                <p>鸢目是神兽踪迹的观察者，负责对未</p>
+                                <p>知的神兽进行为分析与定位追踪并</p>
+                                <p>及时向高层反馈信息以等待正确指</p>
+                                <p>示，必要时还需要能够及时做出紧</p>
+                                <p>急且准确的判断，这要求应征者需</p>
+                                <p>要极高的判断能力与敏锐的洞察力</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo1.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                            <div class="profintroduce-text">
+                                <p>在得到进一步指示后，鸢目需要与</p>
+                                <p>汤行进行对接，同步提供神兽位置</p>
+                                <p>与行为信息，以供汤行开展捕获行</p>
+                                <p>动，面对难以预测的危险，鸢目还</p>
+                                <p>需要对汤行的行动开展适当的指挥</p>
+                                <p>工作，应征者还必须拥有强大的</p>
+                                <p>组织，指挥能力</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo2.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                            <div class="profintroduce-text">
+                                <p>在平日的时间里，即使没有神兽踪迹，</p>
+                                <p>鸢目也必须时刻轮班进行神兽危险事</p>
+                                <p>件的预防监控工作，要想胜任鸢目这</p>
+                                <p>个职位，良好的耐心对于应征者同样</p>
+                                <p>也是缺一不可的</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo3.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                        </div>
+                    </div>
+                    <div class="profpage-left-messagebox">
+                        <div class="profname">
+                            <p>汤</p>
+                            <div class="profname-eng">
+                                <img src="../img/joinus/profession line.png">
+                                <p>THE Tracker</p>
+                                <img src="../img/joinus/profession line.png">
+                            </div>
+                            <p>行</p>
+                        </div>
+                        <div class="profintroduce">
+                            <div class="profintroduce-text">
+                                <p>汤行是神兽捕获行动中直接深入前</p>
+                                <p>线的前锋队员，在大部分的时间里</p>
+                                <p>他们都是在户外不间断的追捕神兽</p>
+                                <p>踪迹，当鸢目发现神兽时，汤行将</p>
+                                <p>根据鸢目提供的信息接手神兽的捕</p>
+                                <p>获行动，对神兽发起高强度追捕，</p>
+                                <p>这将会对应征者的体力要求十分严苛</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo4.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                            <div class="profintroduce-text">
+                                <p>因为是直接与未知的神兽面对面接</p>
+                                <p>触，所以汤行需要具备极高的心理</p>
+                                <p>素质。在完成行动后，汤行还需要</p>
+                                <p>将MAA的行动轨迹给完全覆盖，这要</p>
+                                <p>求汤行需要具备沉着且冷静的性格</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo5.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                            <div class="profintroduce-text">
+                                <p>在与神兽对抗的过程中，汤行需要</p>
+                                <p>熟练的使用各种神兽捕获工具，并</p>
+                                <p>能够很快的对更新迭代的新工具快</p>
+                                <p>速上手，应征者需要拥有较高的学习能力</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo6.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                        </div>
+                    </div>
+                    <div class="profpage-left-messagebox">
+                        <div class="profname">
+                            <p>牧</p>
+                            <div class="profname-eng">
+                                <img src="../img/joinus/profession line.png">
+                                <p>THE shepherd</p>
+                                <img src="../img/joinus/profession line.png">
+                            </div>
+                            <p>使</p>
+                        </div>
+                        <div class="profintroduce">
+                            <div class="profintroduce-text">
+                                <p>牧使负责对MAA控制中心的神兽进行</p>
+                                <p>管理监控与养殖，他需要具备一定的</p>
+                                <p>养殖，畜牧业专业知识，并实际掌握</p>
+                                <p>大部分的动物管理化技术，对神兽的</p>
+                                <p>情绪能够有敏锐的感知能力</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo7.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                            <div class="profintroduce-text">
+                                <p>牧使并不能简单的看作神兽饲养员</p>
+                                <p>与汤行一样，牧使也是一个会与神</p>
+                                <p>兽面对面接触的职位，尽管神兽在</p>
+                                <p>MAA已经得到控制管理，但牧使还</p>
+                                <p>需对大部分凶兽进行驯化，去恶化</p>
+                                <p>工作，面对小概率的危险事件，牧</p>
+                                <p>使也需要具备沉着的内心来应对问题</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo8.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                            <div class="profintroduce-text">
+                                <p>此外，牧使实际也是一个全方面多</p>
+                                <p>功能化的职位，他不仅要养殖，监</p>
+                                <p>管神兽，还需要对生病的神兽进行</p>
+                                <p>医疗治疗，还有对神兽的能力开展</p>
+                                <p>研究实验等，牧使最重要的就是</p>
+                                <p>具有责任心，爱心，有极好的相处能力</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo9.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                        </div>
+                    </div>
+                    <div class="profpage-left-messagebox">
+                        <div class="profname">
+                            <p>亘</p>
+                            <div class="profname-eng">
+                                <img src="../img/joinus/profession line.png">
+                                <p>THE Recorder</p>
+                                <img src="../img/joinus/profession line.png">
+                            </div>
+                            <p>墨</p>
+                        </div>
+                        <div class="profintroduce">
+                            <div class="profintroduce-text">
+                                <p>亘墨是MAA中相对较少的文职，他主要</p>
+                                <p>负责神兽图鉴的编写记载与更新管理，</p>
+                                <p>对于偏文职性的应征者来说，这个职位</p>
+                                <p>对于他们来说再适合不过</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo10.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                            <div class="profintroduce-text">
+                                <p>此外，亘墨在编写图鉴之余，还负</p>
+                                <p>责需整理MAA的大部分内部资料</p>
+                                <p>对于应征者来说，较好的文字处理</p>
+                                <p>能力是缺一不可的</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo11.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                            <div class="profintroduce-text">
+                                <p>与其他三个职位不同，亘墨需要长</p>
+                                <p>期与MAA的内部机密打交道，为了</p>
+                                <p>防止机密泄露，应征者最重要的一</p>
+                                <p>个职责就是保护MAA内部资料的安</p>
+                                <p>全，且严以律己，不可将机密信息</p>
+                                <p>外传，这使得亘墨的应征者</p>
+                                <p>需要具有强大的责任心</p>
+                            </div>
+                            <img class="profintroduce-img"
+                                 src="../img/joinus/profession photo12.webp">
+                            <img class="profintroduce-cloud"
+                                 src="../svg/joinus/introduce cloud.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="profpage-right">
+                    <div class="profpage-right-cardbox">
+                        <div class="profcard">
+                            <img src="../svg/joinus/mountain line1.svg">
+                            <div class="profcard-name">
+                                <p>鸢目</p>
+                                <img src="../svg/joinus/flower line.svg">
+                            </div>
+                            <img src="../svg/joinus/profession logo (1).svg">
+                        </div>
+                    </div>
+                    <div class="profpage-right-cardbox">
+                        <div class="profcard">
+                            <img src="../svg/joinus/mountain line1.svg">
+                            <div class="profcard-name">
+                                <p>汤行</p>
+                                <img src="../svg/joinus/flower line.svg">
+                            </div>
+                            <img src="../svg/joinus/profession logo (2).svg">
+                        </div>
+                    </div>
+                    <div class="profpage-right-cardbox">
+                        <div class="profcard">
+                            <img src="../svg/joinus/mountain line1.svg">
+                            <div class="profcard-name">
+                                <p>牧使</p>
+                                <img src="../svg/joinus/flower line.svg">
+                            </div>
+                            <img src="../svg/joinus/profession logo (3).svg">
+                        </div>
+                    </div>
+                    <div class="profpage-right-cardbox">
+                        <div class="profcard">
+                            <img src="../svg/joinus/mountain line1.svg">
+                            <div class="profcard-name">
+                                <p>亘墨</p>
+                                <img src="../svg/joinus/flower line.svg">
+                            </div>
+                            <img src="../svg/joinus/profession logo (4).svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/menupage.js"></script>
+<script src="../js/joinus.js"></script>
+
+</html>

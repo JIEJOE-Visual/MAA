@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="authoring-tool" content="Adobe_Animate_CC" />
+    <title>MAA | 队员资料 NO.0216 神农</title>
+    <link rel="stylesheet" href="../../css/currency.css">
+    <link rel="stylesheet" href="../../css/menupage.css">
+    <link rel="stylesheet" href="../../css/mythical_animals.css">
+    <link rel="shortcut icon" href="../../img/MAA-logo.ico" type="image/x-icon">
+    <script src="../../js/d3.js"></script>
+</head>
+<style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--t-purple);
+    }
+
+</style>
+
+<body>
+    <div id="menupage">
+        <div class="menupage-window">
+            <div class="menupage-window-imgboxs"
+                 onclick="menucontrol.jumppage()">
+                <img src="../../img/menu img1.webp">
+                <img src="../../img/menu img2.webp">
+                <img src="../../img/menu img3.webp">
+                <img src="../../img/menu img4.webp">
+            </div>
+            <img src="../../svg/window.svg">
+        </div>
+        <div class="menupage-textbox">
+            <div>
+                <p onmouseover="menucontrol.change(0)"
+                   onclick="menucontrol.jumppage(0)">关于<span>. about us</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(1)"
+                   onclick="menucontrol.jumppage(1)">团队<span>. team</span></p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(2)"
+                   onclick="menucontrol.jumppage(2)">图鉴<span>. handbook</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(3)"
+                   onclick="menucontrol.jumppage(3)">征召<span>. join us</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="menucolmun" id="menucolmun">
+        <div class="menucolmun-logo" onclick=" if (menucontrol.if_pageshow) {menucontrol.jumppage(4);}
+              else {jumppage('../../MAA_home.html')}">
+            <img src="../../svg/MAA logo.svg">
+        </div>
+        <div class="menucolmun-button" onclick="menucontrol.switch()">
+            <svg class="menucolmun-button-linebox menucolmun-button-linebox-off"
+                 viewBox="0 0 600 600">
+                <circle cx="300" cy="300" r="300" />
+                <rect width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="483.125" width="600" height="116.875" />
+            </svg>
+            <div class="menucolmun-button-text">MENU</div>
+        </div>
+    </div>
+    <div class="background">
+        <img class="background-img" src="../../img/team member/0216.jpg">
+    </div>
+    <div class="textbackg"></div>
+    <div class="maintext">
+        <div class="maintext-box">
+            <div class="texttitle">神农</div>
+            <p class="textblock" >
+                代号0216管理员神农拥有特殊的职责，神农加入MAA之前就已经游历了很多地方，大多是名山大川，采摘山上各种野草蔬果，进行收集整理，尝遍了所收集的植株，发现有的野草会令舌头变得麻痹，有的会使人昏厥但清醒后无其他痛感，而有的会使人口吐白沫，近乎丧命。但大多数都能够正常食用。</p>
+            <p>
+                在游历期间，已向许多人传授相关知识，也因此觉得个人能力不够，许多人因误食有毒食物或者一场突如其来的瘟疫便会带走许多人的生命。 </p> 
+            <p>
+                在尝遍百草后，神农作为医者加入MMA，希望能在MMA中研究、传播更多有关植物与病毒的知识，帮助人民脱离有毒植物。在斐被捕获带回MMA基地后，教育感化，逐渐拥有相同目标两强相遇，更是调制出了多种能治愈奇怪病症的药物。 </p>
+        </div>
+    </div>
+    <div class="mouse_judgebox" onmouseover="mouseicon_show()"
+         onmouseleave="mouseicon_disapper()" onclick="jumppage()">
+        <div class="mouseicon"> BACK </div>
+    </div>
+</body>
+<script src="../../js/menupage.js"></script>
+<script src="../../js/team member.js"></script>
+
+</html>

@@ -1,0 +1,83 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--t-purple);
+    overflow: hidden;
+    transform: scale(2);
+    opacity: 0;
+}
+
+.background-img {
+    width: 100%;
+}
+
+.textbackg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #2e02454d, var(--t-purple));
+}
+
+.maintext {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    align-items: flex-start;
+    justify-content: flex-end;
+    overflow: hidden;
+    left: 10%;
+    opacity: 0;
+}
+
+.maintext-box {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 30rem;
+    margin-top: 8rem;
+    margin-right: 3rem;
+    font-family: ch;
+    color: white;
+}
+
+.texttitle {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    margin-bottom: 1rem;
+}
+
+.maintext-box p {
+    font-size: 2rem;
+    line-height: 4rem;
+    margin-bottom: 8rem;
+}
+
+.mouse_judgebox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.mouseicon {
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    border: 0.2rem solid white;
+    border-radius: 100%;
+    font-family: eng;
+    font-size: 2.5rem;
+    color: white;
+    transform: scale(0);
+    transition: 0.1s linear;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="authoring-tool" content="Adobe_Animate_CC" />
+    <title>MAA | 神兽图鉴 NO.0545 梦蝶</title>
+    <link rel="stylesheet" href="../../css/currency.css">
+    <link rel="stylesheet" href="../../css/menupage.css">
+    <link rel="stylesheet" href="../../css/mythical_animals.css">
+    <link rel="shortcut icon" href="../../img/MAA-logo.ico" type="image/x-icon">
+    <script src="../../js/d3.js"></script>
+</head>
+<style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--t-purple);
+    }
+
+</style>
+
+<body>
+    <div id="menupage">
+        <div class="menupage-window">
+            <div class="menupage-window-imgboxs"
+                 onclick="menucontrol.jumppage()">
+                <img src="../../img/menu img1.webp">
+                <img src="../../img/menu img2.webp">
+                <img src="../../img/menu img3.webp">
+                <img src="../../img/menu img4.webp">
+            </div>
+            <img src="../../svg/window.svg">
+        </div>
+        <div class="menupage-textbox">
+            <div>
+                <p onmouseover="menucontrol.change(0)"
+                   onclick="menucontrol.jumppage(0)">关于<span>. about us</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(1)"
+                   onclick="menucontrol.jumppage(1)">团队<span>. team</span></p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(2)"
+                   onclick="menucontrol.jumppage(2)">图鉴<span>. handbook</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(3)"
+                   onclick="menucontrol.jumppage(3)">征召<span>. join us</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="menucolmun" id="menucolmun">
+        <div class="menucolmun-logo" onclick=" if (menucontrol.if_pageshow) {menucontrol.jumppage(4);}
+              else {jumppage('../../MAA_home.html')}">
+            <img src="../../svg/MAA logo.svg">
+        </div>
+        <div class="menucolmun-button" onclick="menucontrol.switch()">
+            <svg class="menucolmun-button-linebox menucolmun-button-linebox-off"
+                 viewBox="0 0 600 600">
+                <circle cx="300" cy="300" r="300" />
+                <rect width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="483.125" width="600" height="116.875" />
+            </svg>
+            <div class="menucolmun-button-text">MENU</div>
+        </div>
+    </div>
+    <div class="background">
+        <img class="background-img" src="../../img/mythical animals/0545.webp">
+    </div>
+    <div class="textbackg"></div>
+    <div class="maintext">
+        <div class="maintext-box">
+            <div class="texttitle">梦蝶</div>
+            <p class="textblock" value="0">
+                代号0545，是神兽图鉴中最早具记录的神兽之一，其形态与普通蝴蝶类似，大部分身体为蓝色且带有小黑点，
+                其尾部的生物囊管因为储存着特殊的荧光物质梦蝶可以在其需要的时候发出带有警戒意义的蓝色荧光。</p>
+            <p class="textblock" value="1">
+                至今为止，MAA所发现的梦蝶数量微乎其微，而这都归结于梦蝶具有一种特殊的神兽能力，梦蝶天生可以自由开启维度通道，
+                它是神兽图鉴记录中极少具有跨纬度能力的神兽，梦蝶可以通过其特殊的身体构造将其囊管中的生物液进行一种特殊的化学转换，
+                通过吸收转化产生的高强度能量，梦蝶可以开启一种粒子级别大小的维度通道，通过那个通道，梦蝶可以进入到生物体的梦中。 </p>
+            <p>而梦蝶平时所需的能量则是通过汲取生物体梦中的意识；被吸收意识的生物体在醒来后大部分并不会有所察觉，
+                唯一的影响就是生物体难以再回忆起梦的内容，因为梦蝶对人类几乎没有什么危害，所以MAA一直将梦蝶列为无害保护级神兽。 </p>
+            <p class="textblock" value="2">
+                在汉国时期的一次神兽转移行动中，任职鸢目的庄周无意中发现了梦蝶，因为梦蝶对庄周的梦境意识吸收不完全，
+                导致庄周在醒来后进入了一种跨纬度的混沌态，在一段时间里，庄周与梦蝶的思维进行了紧密的连接，导致他几乎不知道自己到底是庄周还是梦蝶，
+                这一段故事随后被亘墨记载，在流出的档案中，被世人一传十，十传百，随后便有了庄周梦蝶的故事，， </p>
+            <p>在当时，负责进行神兽研究的队员敏捷的察觉到梦蝶的存在，通过混沌态的庄周，MAA很快便找到了神兽图鉴中的第一只梦蝶；
+                在觉察出梦蝶的特殊神兽能力后，MAA通过无数次的研究渐渐掌握了这种能力，在之后，实验人员可以通过对梦蝶进行意识连接，来间接使用梦蝶的能力
+            </p>
+            <p>不久，MAA发现梦蝶在吸收足够的能量后不仅可以吸收生物梦境的意识，还可以吸收他们现实的意识，并可以实现消除生物体的记忆。
+                而正是这一个重大研究突破促进了之后MAA转化为地下组织的进程。直到现在，梦蝶的记忆消除能力都还是MAA所频繁使用的一种珍贵技术。
+            </p>
+        </div>
+    </div>
+    <div class="mouse_judgebox" onmouseover="mouseicon_show()"
+         onmouseleave="mouseicon_disapper()" onclick="jumppage()">
+        <div class="mouseicon"> BACK </div>
+    </div>
+</body>
+<script src="../../js/menupage.js"></script>
+<script src="../../js/mythical_animals.js"></script>
+<script>
+    backg_imgs = [
+        "../../img/mythical animals/0545.webp",
+        "../../img/mythical animals/0545_1.webp",
+        "../../img/mythical animals/0545_2.webp"
+    ];
+</script>
+
+</html>

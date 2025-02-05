@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="authoring-tool" content="Adobe_Animate_CC" />
+    <title>MAA | 队员资料 NO.0252 盘古</title>
+    <link rel="stylesheet" href="../../css/currency.css">
+    <link rel="stylesheet" href="../../css/menupage.css">
+    <link rel="stylesheet" href="../../css/mythical_animals.css">
+    <link rel="shortcut icon" href="../../img/MAA-logo.ico" type="image/x-icon">
+    <script src="../../js/d3.js"></script>
+</head>
+<style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--t-purple);
+    }
+
+</style>
+
+<body>
+    <div id="menupage">
+        <div class="menupage-window">
+            <div class="menupage-window-imgboxs"
+                 onclick="menucontrol.jumppage()">
+                <img src="../../img/menu img1.webp">
+                <img src="../../img/menu img2.webp">
+                <img src="../../img/menu img3.webp">
+                <img src="../../img/menu img4.webp">
+            </div>
+            <img src="../../svg/window.svg">
+        </div>
+        <div class="menupage-textbox">
+            <div>
+                <p onmouseover="menucontrol.change(0)"
+                   onclick="menucontrol.jumppage(0)">关于<span>. about us</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(1)"
+                   onclick="menucontrol.jumppage(1)">团队<span>. team</span></p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(2)"
+                   onclick="menucontrol.jumppage(2)">图鉴<span>. handbook</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(3)"
+                   onclick="menucontrol.jumppage(3)">征召<span>. join us</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="menucolmun" id="menucolmun">
+        <div class="menucolmun-logo" onclick=" if (menucontrol.if_pageshow) {menucontrol.jumppage(4);}
+              else {jumppage('../../MAA_home.html')}">
+            <img src="../../svg/MAA logo.svg">
+        </div>
+        <div class="menucolmun-button" onclick="menucontrol.switch()">
+            <svg class="menucolmun-button-linebox menucolmun-button-linebox-off"
+                 viewBox="0 0 600 600">
+                <circle cx="300" cy="300" r="300" />
+                <rect width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="483.125" width="600" height="116.875" />
+            </svg>
+            <div class="menucolmun-button-text">MENU</div>
+        </div>
+    </div>
+    <div class="background">
+        <img class="background-img" src="../../img/team member/0252.jpg">
+    </div>
+    <div class="textbackg"></div>
+    <div class="maintext">
+        <div class="maintext-box">
+            <div class="texttitle">盘古</div>
+            <p class="textblock" >
+                代号0252管理员是身材高大，力大无比的盘古。其出生于远古时期，当时植被十分茂盛，植物野草比人类都要高，还有许多巨大的树木。人们只呆在自己生存的狭小地界，没有能力向外扩展，也无法看见远处的景况，都认为天和地还在一起没有完全的分开。</p>
+            <p>而巨人盘古的视野并不被植被所阻碍，不愿族人们一直被限制住视野，便徒手开拓空间，不停的斩断部落周围的植被，让眼光所到之处逐渐出现明朗景色。族人们认为是盘古将天地劈开后又用身躯将天地间隔开才有了这番景象。</p> 
+            <p>后续人们都能离开驻地去进行打猎活动以维持温饱。但他们在狩猎动物，神兽也在狩猎他们，不断的出现神兽威胁了族人的安全，盘古便加入了MMA成为一名汤行成员，对世上的神兽进行捕获。</p>
+        </div>
+    </div>
+    <div class="mouse_judgebox" onmouseover="mouseicon_show()"
+         onmouseleave="mouseicon_disapper()" onclick="jumppage()">
+        <div class="mouseicon"> BACK </div>
+    </div>
+</body>
+<script src="../../js/menupage.js"></script>
+<script src="../../js/team member.js"></script>
+
+</html>

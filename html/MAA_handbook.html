@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="authoring-tool" content="Adobe_Animate_CC" />
+    <title>MAA | 神兽图鉴</title>
+    <link rel="stylesheet" href="../css/currency.css">
+    <link rel="stylesheet" href="../css/menupage.css">
+    <link rel="stylesheet" href="../css/handbook.css">
+    <link rel="shortcut icon" href="../img/MAA-logo.ico" type="image/x-icon">
+    <script src="../js/d3.js"></script>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--t-purple);
+        overflow: hidden;
+    }
+
+</style>
+
+<body>
+    <svg>
+        <defs>
+            <filter id='wave'>
+                <feTurbulence type='turbulence' stitchTiles='stitch'
+                              numOctaves='8' baseFrequency='0.02' seed='100' />
+                <feDisplacementMap in='SourceGraphic' scale='0' />
+            </filter>
+        </defs>
+    </svg>
+    <div id="menupage">
+        <div class="menupage-window">
+            <div class="menupage-window-imgboxs"
+                 onclick="menucontrol.jumppage()">
+                <img src="../img/menu img1.webp">
+                <img src="../img/menu img2.webp">
+                <img src="../img/menu img3.webp">
+                <img src="../img/menu img4.webp">
+            </div>
+            <img src="../svg/window.svg">
+        </div>
+        <div class="menupage-textbox">
+            <div>
+                <p onmouseover="menucontrol.change(0)"
+                   onclick="menucontrol.jumppage(0)">关于<span>. about us</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(1)"
+                   onclick="menucontrol.jumppage(1)">团队<span>. team</span></p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(2)"
+                   onclick="menucontrol.jumppage(2)">图鉴<span>. handbook</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(3)"
+                   onclick="menucontrol.jumppage(3)">征召<span>. join us</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="menucolmun">
+        <div class="menucolmun-logo" onclick="logojump_judge()">
+            <img src="../svg/MAA logo.svg">
+        </div>
+        <div class="menucolmun-button" onclick="menucontrol.switch()">
+            <svg class="menucolmun-button-linebox menucolmun-button-linebox-off"
+                 viewBox="0 0 600 600">
+                <circle cx="300" cy="300" r="300" />
+                <rect width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="483.125" width="600" height="116.875" />
+            </svg>
+            <div class="menucolmun-button-text">MENU</div>
+        </div>
+    </div>
+    <div class="persbox">
+        <div class="handbook">
+            <div class="handbook-backg"></div>
+            <div class="cardbox">
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_1284.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>凤凰</p>
+                            <p>NO.1284</p>
+                        </div>
+                        <div class="card-text-body">
+                            凤凰是鸟类始祖,能在一定程度上驾驭其他鸟类。凤凰寿命极长,,,, </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_4632.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>玄武</p>
+                            <p>NO.4632</p>
+                        </div>
+                        <div class="card-text-body"> 神兽图鉴中的天之四灵之一,又名龟蛇。
+                            是一种由龟和蛇组成的一种灵物,,,, </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_8653.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>腾蛇</p>
+                            <p>NO.8653</p>
+                        </div>
+                        <div class="card-text-body">
+                            因为腾蛇庞大的体型与翅膀，每次腾蛇驾风而起的时候，都会带来巨大风暴,,,, </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_2695.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>饕餮</p>
+                            <p>NO.2695</p>
+                        </div>
+                        <div class="card-text-body">
+                            饕餮的肚子就像一个无底洞，只要是能吃的便全部吞到肚子里,,,, </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_3819.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>朱厌</p>
+                            <p>NO.3819</p>
+                        </div>
+                        <div class="card-text-body"> 神兽图鉴中记载的四大恶兽之一，身形像猿猴，
+                            白头红脚，全身毛发鲜红如火，双臂强健有力,,,, </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_4327.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>金乌</p>
+                            <p>NO.4327</p>
+                        </div>
+                        <div class="card-text-body">
+                            形态为体型巨大的三足乌鸦，平时全身被通红羽毛覆盖，尾部长毛泛着金光,,,, </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_5710.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>梼杌</p>
+                            <p>NO.5710</p>
+                        </div>
+                        <div class="card-text-body">
+                            傲狠难训，喜欢按照自己的心意为所欲为，因此有别名傲狠和难训,,,, </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_7194.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>蜚</p>
+                            <p>NO.7194</p>
+                        </div>
+                        <div class="card-text-body">
+                            蜚是疾病的源头，身体周围散发着黑色雾气，当它进入水中时，水会立即干涸,,,, </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_0545.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>梦蝶</p>
+                            <p>NO.0545</p>
+                        </div>
+                        <div class="card-text-body"> 梦蝶天生可以自由开启维度通道，
+                            它是神兽图鉴记录中极少具有跨纬度能力的神兽,,,, </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_9326.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>穷奇</p>
+                            <p>NO.9326</p>
+                        </div>
+                        <div class="card-text-body">
+                            形状如虎身人面,虎齿人爪,头上有一对像羊角一样的坚硬犄角全身毛发坚硬如刺,,,, </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_5813.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>鲲鹏</p>
+                            <p>NO.5813</p>
+                        </div>
+                        <div class="card-text-body">
+                            体型巨大的神兽，在水中时为鲲，鲲体宽体长均有千里，离开水后化身为鹏,,,, </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-cloud1"
+                         src="../svg/handbook/cloud1.svg"></img>
+                    <img class="card-cloud2"
+                         src="../svg/handbook/cloud2.svg"></img>
+                    <img class="card-cloud3"
+                         src="../svg/handbook/cloud3.svg"></img>
+                    <div class="card-img">
+                        <img src="../img/handbook//MA_0895.webp">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-head">
+                            <p>混沌</p>
+                            <p>NO.0895</p>
+                        </div>
+                        <div class="card-text-body">
+                            混沌所到之处人畜无影。混沌每到一个地方，便利用歌舞吸引人类和猎物到它身边,,,, </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="showbox">
+        <div class="showbox-card" onclick="handbook.jumppage()" onmouseover="
+        mouseicon_show()" onmouseout="mouseicon_disapper()">
+            <img class="card-cloud1" src="../svg/handbook/cloud1.svg"></img>
+            <img class="card-cloud2" src="../svg/handbook/cloud2.svg"></img>
+            <img class="card-cloud3" src="../svg/handbook/cloud3.svg"></img>
+            <div class="card-img">
+                <img src="../img/handbook//MA_1284.webp">
+            </div>
+            <div class="card-text">
+                <div class="card-text-head">
+                    <p>凤凰</p>
+                    <p>NO.1284</p>
+                </div>
+                <div class="card-text-body"> 凤凰是鸟类始祖,能在一定程度上驾驭其他鸟类。凤凰寿命极长,,,,
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-tips">
+        <p>SCROLL</p>
+        <svg viewBox="0 0 6 164">
+            <path d="M3,0V164" />
+        </svg>
+    </div>
+    <div class="mouseicon"> click </div>
+</body>
+<script src="../js/menupage.js"></script>
+<script src="../js/handbook.js"></script>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="authoring-tool" content="Adobe_Animate_CC" />
+    <title>MAA | 神兽图鉴 NO.8653 腾蛇</title>
+    <link rel="stylesheet" href="../../css/currency.css">
+    <link rel="stylesheet" href="../../css/menupage.css">
+    <link rel="stylesheet" href="../../css/mythical_animals.css">
+    <link rel="shortcut icon" href="../../img/MAA-logo.ico" type="image/x-icon">
+    <script src="../../js/d3.js"></script>
+</head>
+<style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--t-purple);
+    }
+
+</style>
+
+<body>
+    <div id="menupage">
+        <div class="menupage-window">
+            <div class="menupage-window-imgboxs"
+                 onclick="menucontrol.jumppage()">
+                <img src="../../img/menu img1.webp">
+                <img src="../../img/menu img2.webp">
+                <img src="../../img/menu img3.webp">
+                <img src="../../img/menu img4.webp">
+            </div>
+            <img src="../../svg/window.svg">
+        </div>
+        <div class="menupage-textbox">
+            <div>
+                <p onmouseover="menucontrol.change(0)"
+                   onclick="menucontrol.jumppage(0)">关于<span>. about us</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(1)"
+                   onclick="menucontrol.jumppage(1)">团队<span>. team</span></p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(2)"
+                   onclick="menucontrol.jumppage(2)">图鉴<span>. handbook</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(3)"
+                   onclick="menucontrol.jumppage(3)">征召<span>. join us</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="menucolmun" id="menucolmun">
+        <div class="menucolmun-logo" onclick=" if (menucontrol.if_pageshow) {menucontrol.jumppage(4);}
+              else {jumppage('../../MAA_home.html')}">
+            <img src="../../svg/MAA logo.svg">
+        </div>
+        <div class="menucolmun-button" onclick="menucontrol.switch()">
+            <svg class="menucolmun-button-linebox menucolmun-button-linebox-off"
+                 viewBox="0 0 600 600">
+                <circle cx="300" cy="300" r="300" />
+                <rect width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="483.125" width="600" height="116.875" />
+            </svg>
+            <div class="menucolmun-button-text">MENU</div>
+        </div>
+    </div>
+    <div class="background">
+        <img class="background-img" src="../../img/mythical animals/8653.webp">
+    </div>
+    <div class="textbackg"></div>
+    <div class="maintext">
+        <div class="maintext-box">
+            <div class="texttitle">腾蛇</div>
+            <p class="textblock" value="0">
+                代号8653，形态与普通的蛇一致，但体型巨大，背后生长着巨大双翼，能够迎风而起腾云驾雾。因为腾蛇庞大的体型与翅膀，每次腾蛇驾风而起的时候，都会带来巨大风暴。
+            <p class="textblock" value="1">
+                腾蛇至今数量极少，因为腾蛇并非生来就有巨大身躯与那对巨大翅膀。所有的腾蛇都由普通的蛇不停的进化而来，在进化过程中，腾蛇要经历无数次的蜕皮，每次蜕皮都像是一场死劫。在蜕皮过程中要花费掉身上所有的力气才能将旧皮从身上剥下，而完成蜕皮后，需要一个月新皮才能长好，在那一个月的时间里稍有不慎便会死亡。 </p>
+            <p>腾蛇虽然历经苦难才生出翅膀变得强大，但是却毫不在意别人的付出。每次都会利用自己起飞落地都会带来巨大风暴以及身躯巨大防御力极强的特性，来破坏人类居住地。腾蛇每到一个地方就会频繁的起降扇动翅膀，来给当地制造风暴，直到地面所有的建筑物和人类都被风卷到空中才会停下来，任由所有的人和东西自由降落。 </p>
+            <p class="textblock" value="2">
+                MMA在最开始的几次风暴袭击中，以为就是自然出现的风暴，直到后面风暴的次数越来越多，威力与伴随而来的损失也越来越大时才意识到不对。MMA迅速派人赶往了现场，到达现场后便看到了在空中肆虐的腾蛇。在经过短暂的方案制定后，MMA成员们开始了捕获。先有若干汤行成员潜伏到腾蛇下方，迅速搭建起了一套网状陷阱，然后便是后羿拿箭射向腾蛇将其引入到陷阱之中。在腾蛇进入陷阱的一瞬间，下方的控制网与后羿的麻醉箭同时到达，腾蛇还没反应过来应该先对那样攻击做出反应时，便失去意识，被MMA成员捕获带回到了基地。 </p>
+            <p>在腾蛇被带回MMA基地后，在MMA成员的不懈努力下，终于成为MMA的伙伴，在必要时利用腾蛇巨大双翼与身体驾风将成员们送到指定地点。
+            </p>
+        </div>
+    </div>
+    <div class="mouse_judgebox" onmouseover="mouseicon_show()"
+         onmouseleave="mouseicon_disapper()" onclick="jumppage()">
+        <div class="mouseicon"> BACK </div>
+    </div>
+</body>
+<script src="../../js/menupage.js"></script>
+<script src="../../js/mythical_animals.js"></script>
+<script>
+    backg_imgs = [
+        "../../img/mythical animals/8653.webp",
+        "../../img/mythical animals/8653_1.webp",
+        "../../img/mythical animals/8653_3.webp"
+    ];
+</script>
+
+</html>

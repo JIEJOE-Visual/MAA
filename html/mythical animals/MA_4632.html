@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="authoring-tool" content="Adobe_Animate_CC" />
+    <title>MAA | 神兽图鉴 NO.4632 玄武</title>
+    <link rel="stylesheet" href="../../css/currency.css">
+    <link rel="stylesheet" href="../../css/menupage.css">
+    <link rel="stylesheet" href="../../css/mythical_animals.css">
+    <link rel="shortcut icon" href="../../img/MAA-logo.ico" type="image/x-icon">
+    <script src="../../js/d3.js"></script>
+</head>
+<style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--t-purple);
+    }
+
+</style>
+
+<body>
+    <div id="menupage">
+        <div class="menupage-window">
+            <div class="menupage-window-imgboxs"
+                 onclick="menucontrol.jumppage()">
+                <img src="../../img/menu img1.webp">
+                <img src="../../img/menu img2.webp">
+                <img src="../../img/menu img3.webp">
+                <img src="../../img/menu img4.webp">
+            </div>
+            <img src="../../svg/window.svg">
+        </div>
+        <div class="menupage-textbox">
+            <div>
+                <p onmouseover="menucontrol.change(0)"
+                   onclick="menucontrol.jumppage(0)">关于<span>. about us</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(1)"
+                   onclick="menucontrol.jumppage(1)">团队<span>. team</span></p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(2)"
+                   onclick="menucontrol.jumppage(2)">图鉴<span>. handbook</span>
+                </p>
+            </div>
+            <div>
+                <p onmouseover="menucontrol.change(3)"
+                   onclick="menucontrol.jumppage(3)">征召<span>. join us</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="menucolmun" id="menucolmun">
+        <div class="menucolmun-logo" onclick=" if (menucontrol.if_pageshow) {menucontrol.jumppage(4);}
+              else {jumppage('../../MAA_home.html')}">
+            <img src="../../svg/MAA logo.svg">
+        </div>
+        <div class="menucolmun-button" onclick="menucontrol.switch()">
+            <svg class="menucolmun-button-linebox menucolmun-button-linebox-off"
+                 viewBox="0 0 600 600">
+                <circle cx="300" cy="300" r="300" />
+                <rect width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="249.375" width="600" height="116.875" />
+                <rect y="483.125" width="600" height="116.875" />
+            </svg>
+            <div class="menucolmun-button-text">MENU</div>
+        </div>
+    </div>
+    <div class="background">
+        <img class="background-img" src="../../img/mythical animals/4632_1.webp">
+    </div>
+    <div class="textbackg"></div>
+    <div class="maintext">
+        <div class="maintext-box">
+            <div class="texttitle">玄武</div>
+            <p class="textblock" value="0">
+                代号4632，神兽图鉴中的天之四灵之一,又名龟蛇。是一种由龟和蛇组成的一种灵物，蛇与龟交缠合体后便成为玄武。玄武也是长寿的象征，龟类本就长寿，而玄武从人类初生时便是人类守护神，更是见证了所有人类的生老病死，也就成为了人类对长寿的期望与象征。</p>
+            <p>武驻守在北方大地掌控世间的水，在干旱时为人类召水降雨缓解干旱，再洪水时用庞大的身躯扫平山川，疏通水道，维持人类的生存。 </p>
+            <p class="textblock" value="1">
+                玄武的本意就是玄冥，武、冥古音是相通的。玄，是黑的意思；冥，就是阴的意思。玄武虽然是人类的守护神，但它对人类依旧存在傲慢，每次只有人类遇到实在无法解决的问题时才会出现帮助人类。 </p>
+            <p> MMA在一次大旱得雨后发现了玄武的身影，玄武在降雨来临后便要回到栖息地，MMA成员马上上前试图与玄武搭话，玄武并不理睬。</p>
+            <p class="textblock" value="2">
+               MMA成员便跟着玄武到了它的栖息地，玄武看出MMA成员没有坏心思便也没有阻止。在确认玄武的栖息地后，便常常前往玄武栖息地，给玄武阐述MMA组织是做什么，而做了会有什么作用，如果玄武加入后会得到怎么样事半功倍的效果。虽然玄武很少会应答，但是逐渐在MMA队员坚持不懈的努力下玄武的态度有了松动。便开始邀请玄武前往观看MMA捕获神兽。</p>
+            <p>在经过不知道多少的MMA队员的沟通后，玄武终于认可了MMA，同意与MMA合作，但是仅限于对人类有益的事情。从此以后没到干旱或洪水人类无法应对的时候玄武便会和MMA成员一起前往灾害地进行控水和救灾。</p>
+           
+        </div>
+    </div>
+    <div class="mouse_judgebox" onmouseover="mouseicon_show()"
+         onmouseleave="mouseicon_disapper()" onclick="jumppage()">
+        <div class="mouseicon"> BACK </div>
+    </div>
+</body>
+<script src="../../js/menupage.js"></script>
+<script src="../../js/mythical_animals.js"></script>
+<script>
+    backg_imgs = [
+        "../../img/mythical animals/4632_1.webp",
+        "../../img/mythical animals/4632_2.webp",
+        "../../img/mythical animals/4632_3.webp",
+    ];
+</script>
+
+</html>

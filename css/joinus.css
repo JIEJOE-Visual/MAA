@@ -1,0 +1,641 @@
+body {
+    width: 100%;
+    background-color: var(--t-purple);
+}
+
+#welcomepage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.welcomepage-main {
+    align-items: flex-end;
+}
+
+.welcomepage-main-img {
+    position: relative;
+    height: 15rem;
+    margin-right: 2rem;
+    left: -2%;
+    opacity: 0;
+}
+
+.welcomepage-main-img img {
+    height: 100%;
+}
+
+.welcomepage-main-text {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.welcomepage-main-text div:nth-child(1) {
+    width: 32rem;
+    overflow: hidden;
+}
+
+.welcomepage-main-text div:nth-child(1) p {
+    position: relative;
+    font-family: ch;
+    font-size: 7rem;
+    letter-spacing: 1rem;
+    color: var(--t-yellow);
+    top: 10rem;
+}
+
+.welcomepage-main-text div:nth-child(2) {
+    width: 32rem;
+    border-top: 0.3rem white solid;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.welcomepage-main-text div:nth-child(2) p {
+    font-family: eng;
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 0.5rem;
+}
+
+.welcomepage-main-text div:nth-child(2) p span {
+    font-family: eng;
+    font-size: 3rem;
+    color: var(--t-red);
+    letter-spacing: 1rem;
+}
+
+.welcomepage-scrolltip {
+    flex-direction: column;
+    position: absolute;
+    bottom: 2rem;
+    opacity: 0;
+}
+
+.welcomepage-scrolltip p {
+    font-family: monospace;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    color: white;
+}
+
+.welcomepage-scrolltip svg {
+    width: 3rem;
+    fill: none;
+    stroke: white;
+    stroke-width: 1;
+}
+
+#log {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    top: 10%;
+    opacity: 0;
+}
+
+.introduce1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 10rem;
+}
+
+.introduce1-textlinesbox {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 30rem;
+    margin-right: 5rem;
+}
+
+.introduce1-textline {
+    overflow: hidden;
+}
+
+.introduce1-textline p {
+    position: relative;
+    font-family: ch;
+    color: white;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    transform: translateY(100%);
+}
+
+.introduce1-img {
+    position: relative;
+    width: 40rem;
+    height: 30rem;
+}
+
+.introduce1-img img {
+    width: 100%;
+}
+
+.introduce2 {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 10rem;
+}
+
+.introduce2-textlinesbox {
+    position: relative;
+    flex-direction: column;
+}
+
+.introduce2-textline {
+    overflow: hidden;
+}
+
+.introduce2-textline p {
+    position: relative;
+    font-family: ch;
+    font-size: 3rem;
+    color: white;
+    line-height: 3.5rem;
+    transform: translateY(100%);
+}
+
+.introduce2-img {
+    position: relative;
+    width: 50rem;
+}
+
+.introduce2-img img {
+    width: 100%;
+}
+
+.introduce3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.introduce3-img {
+    position: absolute;
+}
+
+.introduce3-img img:nth-child(1) {
+    position: relative;
+    width: 43rem;
+}
+
+.introduce3-img img:nth-child(2) {
+    position: relative;
+    width: 35rem;
+    left: -20rem;
+    top: -3rem;
+}
+
+.introduce3-textlinebox {
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: translate(60%, 60%);
+    /* right: 15rem; */
+}
+
+.introduce3-textline {
+    overflow: hidden;
+}
+
+.introduce3-textline p {
+    position: relative;
+    font-family: ch;
+    color: white;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    transform: translateY(100%);
+}
+
+.introduce4 {
+    width: 100%;
+    height: 100vh;
+}
+
+.introduce4-textlinebox {
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: translateX(-25%);
+}
+
+.introduce4-textline {
+    overflow: hidden;
+}
+
+.introduce4-textline p {
+    position: relative;
+    font-family: ch;
+    color: white;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    transform: translateY(100%);
+}
+
+.introduce4-img {
+    position: absolute;
+    flex-direction: column;
+    transform: translate(75%, 20%);
+}
+
+.introduce4-img img {
+    width: 25rem;
+}
+
+.introduce4-img-text p:nth-child(1) {
+    font-family: eng;
+    font-size: 3rem;
+    color: var(--t-yellow);
+    margin-right: 0.5rem;
+}
+
+.introduce4-img-text p:nth-child(2) {
+    font-family: ch;
+    font-size: 3rem;
+    color: var(--t-yellow);
+}
+
+.introduce5-textlinebox {
+    position: absolute;
+    flex-direction: column;
+}
+
+.introduce5-textline {
+    overflow: hidden;
+}
+
+.introduce5-textline p {
+    position: relative;
+    font-family: ch;
+    color: white;
+    font-size: 3rem;
+    line-height: 4rem;
+    transform: translateY(100%);
+}
+
+.introduce5 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.introduce5-img {
+    position: absolute;
+}
+
+.introduce5-img img {
+    width: 20rem;
+}
+
+.criterion-leadpage {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.criterion-leadpage-textlinebox {
+    position: absolute;
+    flex-direction: column;
+}
+
+.criterion-leadpage-textline {
+    overflow: hidden;
+}
+
+.criterion-leadpage-textline p {
+    position: relative;
+    font-family: ch;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    /* top: 3rem; */
+}
+
+.criterion-page {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 500vh;
+    margin-bottom: 30vh;
+}
+
+.criterion-cardbox {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.criterion-cardbox-checked {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.criterion-card {
+    position: absolute;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+    transition: 0.2s linear;
+    box-shadow: -0.2rem -0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.criterion-card-move1,
+.criterion-card-move2,
+.criterion-card-move3,
+.criterion-card-move4 {
+    transform: translateY(100%);
+    /* transition: 0.2s linear; */
+}
+
+.criterion-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../svg/joinus/criterion_backg.svg");
+    background-size: 80%;
+    opacity: 0.05;
+}
+
+.criterion-card-text {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10rem;
+    margin-top: 11rem;
+}
+
+.criterion-card-text-head {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.criterion-card-text-head > p {
+    font-family: eng;
+    font-size: 13rem;
+    line-height: 10.5rem;
+    margin-right: 1rem;
+}
+
+.criterion-card-text-head div {
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: eng;
+    color: var(--t-red);
+}
+
+.criterion-card-text-head div p:nth-child(1) {
+    font-size: 4rem;
+    line-height: 3rem;
+}
+
+.criterion-card-text-head div p:nth-child(2) {
+    font-size: 8rem;
+    line-height: 6.5rem;
+}
+
+.criterion-card-text-line {
+    position: relative;
+    margin: 1rem 0 2rem 0;
+}
+
+.criterion-card-text-line div:nth-child(1),
+.criterion-card-text-line div:nth-child(3) {
+    width: 10rem;
+    height: 0.3rem;
+    background-color: var(--t-red);
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.criterion-card-text-line p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: var(--t-red) 0.3rem solid;
+    border-radius: 100%;
+    font-family: ch;
+    font-size: 2rem;
+    color: var(--t-red);
+}
+
+.criterion-card-text-main {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.criterion-card-text-main p {
+    font-family: ch;
+    font-size: 2rem;
+    color: black;
+}
+
+.criterion-card-img {
+    position: relative;
+    width: 32rem;
+    margin-right: 10rem;
+    margin-top: 11rem;
+    opacity: 0.8;
+}
+
+.criterion-card-img img {
+    width: 100%;
+}
+
+.profpage-leadtext {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.profpage-leadtext p {
+    font-family: ch;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.profpage {
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 1550vh;
+}
+
+.profpage-left {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.profpage-left-checked {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.profpage-left-messagebox {
+    position: relative;
+    flex-direction: column;
+    flex-shrink: 0;
+    transition: 0.3s linear;
+}
+
+.profname {
+    position: relative;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.profname > p:nth-child(1),
+.profname > p:nth-child(3) {
+    position: relative;
+    font-family: ch;
+    font-size: 13rem;
+    color: white;
+    line-height: 12rem;
+}
+
+.profname > p:nth-child(1) {
+    transform: translateX(-30%);
+}
+
+.profname > p:nth-child(3) {
+    transform: translateX(30%);
+}
+
+.profname-eng {
+    position: relative;
+}
+
+.profname-eng img:nth-child(1) {
+    width: 8rem;
+}
+
+.profname-eng p {
+    font-family: eng;
+    font-size: 3rem;
+    color: var(--t-red);
+    margin: 0 1rem 0 1rem;
+}
+
+.profname-eng img:nth-child(3) {
+    width: 8rem;
+    transform: scale(-1);
+}
+
+.profintroduce {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.profintroduce-text {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profintroduce-text p {
+    color: white;
+    font-family: ch;
+    font-size: 2rem;
+}
+
+.profintroduce-img {
+    width: 30rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.profintroduce-cloud {
+    width: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.profpage-right {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.profpage-right-checked {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.profpage-right-cardbox {
+    position: relative;
+    height: 100vh;
+    flex-shrink: 0;
+    transition: 0.3s linear;
+}
+
+.profcard {
+    position: relative;
+    width: 35rem;
+    height: 40rem;
+    background-color: white;
+    background: linear-gradient(45deg, white, rgb(231, 231, 231));
+    box-shadow:
+        inset 0.6rem 0.6rem 0.5rem rgba(0, 0, 0, 0.2),
+        inset -1rem -1rem 0.5rem rgba(255, 255, 255, 0.5);
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.profcard-name {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 1rem;
+    right: 2rem;
+}
+
+.profcard-name p {
+    font-family: ch;
+    font-size: 4rem;
+    color: black;
+    writing-mode: vertical-lr;
+}
+
+.profcard-name img {
+    width: 3rem;
+}
+
+.profcard > img:nth-child(1) {
+    position: absolute;
+    width: 50rem;
+    bottom: -5rem;
+    opacity: 0.5;
+}
+
+.profcard > img:nth-child(3) {
+    position: absolute;
+    width: 20rem;
+}

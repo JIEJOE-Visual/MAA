@@ -1,0 +1,222 @@
+.persbox {
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    perspective: 100rem;
+    transform-style: preserve-3d;
+}
+
+.handbook {
+    position: absolute;
+    width: 70%;
+    height: 0;
+    background-color: white;
+    border-left: 6rem #c6a875 solid;
+    border-right: 6rem #c6a875 solid;
+    transform-origin: top center;
+    /* transform: rotateX(70deg) scale(0.6); */
+    /* transition: 1s ease; */
+    overflow: hidden;
+}
+
+.handbook-backg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../svg/handbook/cloud_backg.svg);
+    background-size: 30%;
+    opacity: 0.2;
+}
+
+.cardbox {
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 80rem;
+    opacity: 0.5;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    flex-shrink: 0;
+    mix-blend-mode: darken;
+    margin-bottom: 10rem;
+    filter: grayscale(1);
+    cursor: pointer;
+    perspective: 50rem;
+}
+
+.card-checked .card-img {
+    transform: translateY(-15rem) translateZ(15rem);
+    opacity: 0;
+}
+
+.card-checked .card-cloud1,
+.card-checked .card-cloud2,
+.card-checked .card-cloud3 {
+    transform: translateZ(10rem) translateY(-10rem);
+    opacity: 0;
+}
+
+.card-checked .card-text-head,
+.card-checked .card-text-body {
+    transform: translateZ(5rem) translateY(-5rem);
+    opacity: 0;
+}
+
+.card-img {
+    position: absolute;
+    left: 6rem;
+    /* width: 35rem; */
+    height: 32rem;
+    transition: 0.5s ease;
+}
+
+.card-img img {
+    height: 100%;
+}
+
+.card-cloud1 {
+    position: absolute;
+    bottom: 7rem;
+    left: 2rem;
+    width: 13rem;
+    transition: 0.3s ease 0.2s;
+}
+
+.card-cloud2 {
+    position: absolute;
+    bottom: 3rem;
+    width: 12rem;
+    transition: 0.4s ease 0.3s;
+}
+
+.card-cloud3 {
+    position: absolute;
+    top: 15rem;
+    right: 19rem;
+    width: 7rem;
+    transition: 0.5s ease 0.2s;
+}
+
+.card-text {
+    position: absolute;
+    right: 6rem;
+    bottom: 4rem;
+    flex-direction: column;
+    align-items: flex-end;
+    perspective: 50rem;
+    transform-style: preserve-3d;
+}
+
+.card-text-head {
+    justify-content: flex-end;
+    transition: 0.4s ease 0.4s;
+}
+
+.card-text-head p:nth-child(1) {
+    font-family: ch;
+    font-size: 7rem;
+    color: black;
+    letter-spacing: 1rem
+}
+
+.card-text-head p:nth-child(2) {
+    font-family: eng;
+    font-size: 2.5rem;
+    color: var(--t-red);
+    writing-mode: vertical-lr;
+}
+
+.card-text-body {
+    height: 9rem;
+    font-family: ch;
+    font-size: 1.5rem;
+    color: black;
+    writing-mode: vertical-rl;
+    line-height: 3rem;
+    transition: 0.4s ease 0.5s;
+}
+
+.showbox {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    /* background-color: aquamarine; */
+    /* display: none; */
+}
+
+.showbox-card {
+    position: relative;
+    width: 70%;
+    height: 40rem;
+    /* background-color: aqua; */
+    transform: translateY(-10%);
+    filter: url(#wave) grayscale(1);
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+}
+
+.scroll-tips {
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    right: 5rem;
+    bottom: 0;
+    opacity: 0;
+}
+
+.scroll-tips p {
+    font-family: eng;
+    font-size: 3rem;
+    color: black;
+    letter-spacing: 0.5rem;
+    writing-mode: vertical-lr;
+    margin-bottom: 0.8rem;
+}
+
+.scroll-tips svg {
+    height: 6rem;
+    fill: none;
+    stroke: black;
+    stroke-width: 10;
+    stroke-dashoffset: 170;
+    stroke-dasharray: 170;
+    animation: line-scroll 2s linear infinite;
+}
+
+@keyframes line-scroll {
+    40% {
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    80% {
+        stroke-dashoffset: -170;
+    }
+
+    100% {
+        stroke-dashoffset: -170;
+    }
+}
+
+.mouseicon {
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    border: 0.2rem solid black;
+    border-radius: 100%;
+    font-family: eng;
+    font-size: 2.5rem;
+    color: black;
+    transform: scale(0);
+}
